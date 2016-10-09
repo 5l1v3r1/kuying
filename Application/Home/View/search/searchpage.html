@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN"> 
+  <head>
+    <title>酷影网www.kyhd.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高清,1080p,720p,蓝光，爱微淘">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">
+  </head>
+  <style>
+  	hr
+  	{
+  		margin-top: -4px;
+  		margin-bottom:0px;
+  	}
+  	.page{ float:right; padding:10px;}
+		.page div{border-left:1px solid #09F; overflow:hidden;}
+		.page span,.page a{ float:left; height:32px; line-height:32px; padding:0px 10px;background:#fff; border:1px solid #09F; border-left:none; font-size:14px;}
+		.page .current{ background:#09f; color:#fff;}
+  	
+  </style>
+  <body style=" FONT-FAMILY: 微软雅黑">
+    <!--NAV-->
+    <include file="./Application/Home/View/public/headerlist.html" />
+		<!--NAV END-->
+    <div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="margin-top:40px;margin-bottom:0px;padding:0px;background-color:white;"    draggable="true">
+    	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;" >
+    		<h3><img src="__PUBLIC__/img/icon/map.gif">1080pBT分享专区<small> 发掘，提供，分享 we do it</small></h3>
+      </div>
+    		<!--left-->
+    	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;" >
+      	<!--left-->
+      	<div class="col-md-10" style="padding-left:5px;margin-left:0px;" >
+	        <!--search	        -->
+	        <h4 color="#fafafa"><img src="__PUBLIC__/img/icon/resourcelist.gif">酷影搜索</h4>
+				      <form class="navbar-form" role="search" action="{:U("Index/search?sea_zone=10&s_p=1")}" method="post">
+				      	<div class="form-group" style="width:90%">
+								         <input type="text" class="form-control" name = "sea_txt"style="width:60%" placeholder="Search">
+								          <select  name = "model" class="form-control"  style="width:35%">
+										         <option value="1">高清电影BT下载区(默认搜索区域)</option>
+										         <option value="5">高清综艺分享专区</option>
+										         <option value="3">高清连续剧区</option>
+										         <option value="4">小容量电影专区</option>
+										      </select>
+						     </div>
+				         <button type="submit" class="btn btn-default">提交</button>
+				      </form> 
+				   <h5>{$empty_info}</h5>   
+				   <hr>
+      		<!--BT list -->
+	        <foreach name="list" item="vo">
+											      <h4>
+											      	<img src="__PUBLIC__/img/icon/list.gif">
+											      	<a href="{:U('Index/show'.$linkzone.'content?fid='.$vo[FID].'');}">
+											         		<small>{$vo.FNAME}</small>		
+											        </a>
+											      </h4>
+					</foreach>
+					 <div class="page">{$s_page}</div>   
+      	</div>
+      	
+      <!--right-->
+      	<include file="./Application/Home/View/public/hdzone/listright.html" />
+      <!--right end-->
+			</div>	 
+    </div>
+    <include file="./Application/Home/View/public/bottom.html" />
+		<!-- 回到顶部 -->
+		<include file="./Application/Home/View/public/re_top.html" />
+    <!-- 回到顶部 -->
+    <!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		      <div class="modal-content">
+		         <div class="modal-header">
+		            <button type="button" class="close" 
+		               data-dismiss="modal" aria-hidden="true">
+		            </button>
+		            <h4 class="modal-title" id="myModalLabel">
+		               亲，您的积分不够！看看下面的介绍，快去赚取积分吧！
+		            </h4>
+		         </div>
+		         <div class="modal-body">
+		            <strong><img src="__PUBLIC__/img/icon/warmnotice.gif"> <font size="3px">如何获取积分</font></strong><br>
+	              <ul class="list-unstyled">
+								  <li>1·注册即送30个积分</li>
+								  <li>2·每天首页签到随机送积分</li>
+								  <li>3·每天首页参与积分抽奖活动</li>
+								</ul>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">确定
+		            </button>
+		         </div>
+		      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/manager.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/MSClass.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.form.js"></script>
+<script>
+	$(document).ready(function(){
+	  $("#l2").addClass("active");
+	  $(".showhide").addClass("alert alert-warning");
+	  $("#reducscore").hide();
+	  var u_uid = "{$_SESSION['u_UID']}";
+	  var u_score = "{$_SESSION['u_score']}";
+	  var l_score = "{$list['SCORE']}";
+	  var aldown = "{$aldown}";
+	  if(u_uid == "" || u_uid == undefined || u_uid == null)
+	  {
+	  	$(".showhide").hide();
+	  }else
+	  {
+	  	//alert(u_uid);
+	  	if(aldown == 1)//已经下载过了
+	  	{
+		  	$(".showhide").show();
+	  	}else
+	  	{
+	  		if((u_score-l_score)>=0)//分数够了
+			  {
+			  	$(".showhide").show();		  	
+			  }else
+			  {
+			  	$(".showhide").hide();
+			  }
+	  	}
+	  	
+	  }
+	  /**
+	  **单击链扣除积分
+	  **/
+	  var fid = "{$list['FID']}";
+	  var datasend = {
+          aldown: aldown,
+          fid: fid,
+          score:l_score,
+          table: 1
+      };
+	  $(".showhide").click(function() 
+				  {
+						var url = '__URL__/showNScore/';  
+						$.ajax({  
+							type: "post",  
+							url: url,  
+							dataType: "json",  
+							data: datasend,
+							timeout: 1000,//超时时间 
+							success: function(msg)
+							{  
+								window.location.reload();
+								//alert(msg);
+								if(msg == 0)
+								{
+									
+								}else if(msg == 1)
+								{
+									$("#reducscore").show();
+									$("#reducscore").animate({
+						           opacity: "hide"
+						       }, 5000);
+								}else if(msg == 2)
+								{
+									alert("亲，还木登录，快去登录吧！");
+								}
+							}  
+						});  
+					});
+	}); 	
+</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","qzone","tsina","renren","tieba","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina","renren","tieba","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+   
+  </body>
+	
+</html> 

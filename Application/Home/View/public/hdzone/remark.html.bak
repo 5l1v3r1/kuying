@@ -1,0 +1,118 @@
+<div class="container" style="padding:10px;margin-top:0px;margin-bottom:0px;">
+	       					<div class="row">
+	       						<h4>发表评论<small> 营造和谐文明氛围，评论禁止灌水、广告，一经发现，封号处理！举报奖励20积分！</small></h4>
+	       						<form role="form" class="form-horizontal" >
+			       				<div class="form-group">   
+		                    <div class="col-md-12"> 
+		                    	<!-- 加载编辑器的容器 --> 
+														<script id="container" name="content" type="text/plain">
+															谈谈你的想法吧！（最少两个字符）
+								    				</script>
+		                    </div>  
+		                    <div class="form-group">  
+							                    <div class="col-md-11 text-right">  
+							                         登录以后才能发布评论哦！<button type="button" class="btn btn-default" onclick="button_click();">提交</button>
+							                    </div>  
+							          </div>  
+							      </div> 
+							    </form>
+							    <!-- 配置文件 -->
+							    <script type="text/javascript" src="__PUBLIC__/other/ueditor/ueditor.config.js"></script>
+							    <!-- 编辑器源码文件 -->
+							    <script type="text/javascript" src="__PUBLIC__/other/ueditor/ueditor.all.js"></script>
+							    <!-- 实例化编辑器 -->
+							    <script type="text/javascript">
+							        var ue = UE.getEditor('container', {
+											    toolbars: [
+											        ['undo', 'redo','cleardoc', 'emotion',]
+											    ],
+											    autoHeightEnabled: true,
+											    autoFloatEnabled: true,
+											    removeEmptyline: false,
+											    maximumWords: 100,
+											    autoClearinitialContent:true,
+											    indentValue: '2em',
+											    emotionLocalization:true,
+											    serialize : { 
+													    //黑名单，编辑器会过滤掉以下标签 
+													    blackList:{style:1, link:1,object:1, input:1, meta:1}, 
+													    //白名单，编辑器会根据此配置保留对应标签下的对应标签或者属性 
+													    whiteList:{  
+													        'p': {'br':1,'BR':1}, 
+													        'div':{'br':1,'BR':1,'$':{'id':1,'style':1}} 
+													    } 
+													},
+											});
+											/*
+											*输出remark action="{:U('Remark/getContent?rfid='.$list['FID'].'&sort=1&p=1')}" method="post"
+											*/
+											var flag =false;
+											function button_click()
+											{
+												if(flag == true)
+												{
+													alert("亲，请不要重复提交哦！");
+													return 0;
+												}
+												var content =UE.getEditor('container').getContent() ;
+												if(content == "" || content == undefined || content == null)
+												{
+													alert("亲，评论内容不能为空噢！");
+													return 0;
+												}
+												if(content.length>630)
+												{
+													alert(content.length);
+													//alert("亲，评论内容太长了！");
+													return 0;
+												}
+												if(content.length<9)
+												{
+													alert("亲，评论内容至少三个字符！");
+													return 0;
+												}
+												var r_url = '__URL__/getReContent/'; 
+												var r_fid = "{$list['FID']}";
+												var r_datasend = {
+									          fid: r_fid,
+									          sort: 1,
+									          content:content,
+									      };
+									      var str;
+									      $.ajax({  
+													type: "post",  
+													url: r_url,  
+													dataType: "json",  
+													data: r_datasend,
+													timeout: 1000,//超时时间 
+													success: function(msg)
+													{  
+														
+														//alert(msg);
+														if(msg == 0)
+														{
+															
+															alert(消息发送失败);
+														}else if(msg == 1)
+														{
+															alert("评论成功！");
+															flag = true;
+															window.location.reload();
+														}else if(msg == 2)
+														{
+															alert("亲，评论过于频繁，等会再评论吧！");
+														}else
+														{
+															alert("亲，先登录吧！");
+														}
+													}  
+												});  
+												//alert(content);  
+											}	
+							    </script>
+							    	  <h4>评论列表</h4>
+		       						<div class="thumbnail" id="remarklist" >
+		       							{$re_txt['REMARK']}
+		       						</div>
+		       				</div>
+		       			</div>

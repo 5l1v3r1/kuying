@@ -1,0 +1,40 @@
+<div class="col-md-3" style="padding:0px;margin-right:0px;margin-top:0px;margin-bottom:0px;" >
+	      	
+	        <div class="row" style="padding-left:10px;padding-top:0px;margin:0px;">
+	        	<h4><img src="__PUBLIC__/img/icon/tips.gif">&nbsp小贴士<small>&nbspTips</small></h4>
+	        	<div class="thumbnail" style="padding:0px;margin:0px;" >
+	            <div class="caption" >
+	              <!--<span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=5px>商务区</font><br>
+	              <br> --> 
+	              <strong><img src="__PUBLIC__/img/icon/warmnotice.gif"> <font size="3px">积分有神马用？</font></strong><br>
+	              <ul class="list-unstyled">
+								  <li>1. 下载BT种子需要积分</li>
+								  <li>2. 参与积分抽奖活动</li>
+								</ul>
+								<hr>
+	              <strong><img src="__PUBLIC__/img/icon/warmnotice.gif"> <font size="3px">如何获取积分</font></strong><br>
+	              <ul class="list-unstyled">
+								  <li>1. 注册即送30个积分</li>
+								  <li>2. 每天首页签到随机送积分</li>
+								  <li>3. 每天首页参与积分抽奖活动</li>
+								</ul>
+								<hr>
+								<div class="col-md-12" style="padding:2px;margin-top:9px;margin-bottom:0px;"><span class="label label-primary"> QQ讨论群</span></div>
+	              <div class="col-md-12" style="padding:2px;margin-top:5px;margin-bottom:0px;">
+	              	<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=341e04b4d811ca828e92e3e8dd41b6f6e694c98f536d13260245155c796e8222">
+											<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="酷影网高清交流群" title="酷影网高清交流群">
+									</a>
+								</div>
+								<h5>
+								· 加群申请注明："酷影"
+								</h5>
+								<hr>
+								<br>
+								<p style="font-size:15px;"><span class="label label-success">微信公众账号</span></p>
+								<p class="text-center"><img src="__PUBLIC__/img/icon/weixin.gif"></p>
+	            </div>
+	          </div>    
+	        </div>  
+	      	
+	        
+</div> 

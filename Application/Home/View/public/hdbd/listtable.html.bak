@@ -1,0 +1,39 @@
+<div class="row" style="padding:0px;margin-left:0px;margin-right:0px;">
+	        	<div class="row" style="padding:8px;margin-left:0px;background-color:#fafafa;">
+	        		
+			          <div class="thumbnail" style="margin-bottom:10px">
+											<table id="zonelist" class="table table-striped">
+											   <thead>
+											      <tr>
+											      	 
+											      	 	<th width="1%"></th>
+											      	 	<th width="6%"><small>类 型</small></th>
+											         	<th><center><small>资 源 名 称</small></center></th>
+											         	<th width="5%"><small>浏览</small></th>
+											         	<th width="5%"><small>积分</small></th>
+											         
+											      </tr>
+											   </thead>
+											   <tbody>
+											   	<foreach name="list" item="vo">
+											      <tr>
+											      	<td><img src="__PUBLIC__/img/icon/list.gif"></td>
+											      	<td><font color="#007edf">[{$vo.TYPE}]</font></td>
+											         <td>
+											         	
+											         	<a href="{:U('Index/showBDcontent?fid='.$vo['FID'].'');}">
+											         		{$vo.FNAME}		
+											         	</a>
+											         	<small><img src="__PUBLIC__/img/icon/listinfo.gif">上传时间<?php echo date('Y/m/d',intval($vo['UPTIME']/1000)); ?></small>
+											         </td>
+											         <td><small>{$vo.SCAN_NUM}</small></td>
+											         <td>{$vo.SCORE}</td>
+											      </tr>
+											    </foreach>
+											   </tbody>
+											</table>
+				        </div> 
+			      	
+	          </div> 
+	          <div class="page">{$page}</div>   
+</div>

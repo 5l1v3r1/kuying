@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
+  <head>
+    <title>酷影网www.kyhd.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高清,1080p,720p,蓝光，爱微淘">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">
+
+  </head>
+	<body class="keBody" onLoad="init()" style=" FONT-FAMILY: 微软雅黑">
+		  
+		<div class="kePublic">
+		<!--效果html开始-->
+		
+		<!--效果html结束-->
+		</div>
+    <div class="container" >
+      <div class="row text-center" style="height:100%; position: absolute; top: 40%; left: 30%; bottom: 0; right: 30%; ">
+	        <div class="col-md-12">
+	        	<h1><img src="__PUBLIC__/img/icon/LOGO.png" /></h1>
+	          <h1 class="text-danger"><strong>欢迎进入酷影网HD高清的世界！</strong></h1>
+	          <h2 class="text-danger ">www.kyhd.net</h2>
+	          <center><a class="btn btn-default btn-lg btn-block" style="width:50%;" href="{:U('Index/showindex');}">点击进入</a></center>
+	          <h2 class="text-danger"><strong>由于网站使用了最新的html5技术，为了正常浏览网站，<br>请使用360/搜狗等浏览器的网友将浏览器模式调整为“极（高）速模式！”</strong><a  target="_blank" href="http://jingyan.baidu.com/article/acf728fd2390e9f8e510a320.html">不知道怎么调？点击</a></h2>
+	        </div>
+	    </div>
+    </div>
+    <audio id="clickSound" autoplay="autoplay">   
+		<source src="__PUBLIC__/music/enter.mp3">   
+		</audio>
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/ThreeCanvas.js"></script> 
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/Snow.js"></script> 
+		<script>
+		
+					var SCREEN_WIDTH = window.innerWidth;
+					var SCREEN_HEIGHT = window.innerHeight;
+		
+					var container;
+		
+					var particle;
+		
+					var camera;
+					var scene;
+					var renderer;
+		
+					var mouseX = 0;
+					var mouseY = 0;
+		
+					var windowHalfX = window.innerWidth / 2;
+					var windowHalfY = window.innerHeight / 2;
+					
+					var particles = []; 
+					var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+					particleImage.src = '__PUBLIC__/img/index/enter/ParticleSmoke.png'; 
+		
+				
+				
+					function init() {
+		
+						container = document.createElement('div');
+						document.body.appendChild(container);
+		
+						camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+						camera.position.z = 1000;
+		
+						scene = new THREE.Scene();
+						scene.add(camera);
+							
+						renderer = new THREE.CanvasRenderer();
+						renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+						var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+							
+						for (var i = 0; i < 500; i++) {
+		
+							particle = new Particle3D( material);
+							particle.position.x = Math.random() * 2000 - 1000;
+							particle.position.y = Math.random() * 2000 - 1000;
+							particle.position.z = Math.random() * 2000 - 1000;
+							particle.scale.x = particle.scale.y =  1;
+							scene.add( particle );
+							
+							particles.push(particle); 
+						}
+		
+						container.appendChild( renderer.domElement );
+		
+			
+						document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+						document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+						document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+						
+						setInterval( loop, 1000 / 60 );
+						
+					}
+					
+					function onDocumentMouseMove( event ) {
+		
+						mouseX = event.clientX - windowHalfX;
+						mouseY = event.clientY - windowHalfY;
+					}
+		
+					function onDocumentTouchStart( event ) {
+		
+						if ( event.touches.length == 1 ) {
+		
+							event.preventDefault();
+		
+							mouseX = event.touches[ 0 ].pageX - windowHalfX;
+							mouseY = event.touches[ 0 ].pageY - windowHalfY;
+						}
+					}
+		
+					function onDocumentTouchMove( event ) {
+		
+						if ( event.touches.length == 1 ) {
+		
+							event.preventDefault();
+		
+							mouseX = event.touches[ 0 ].pageX - windowHalfX;
+							mouseY = event.touches[ 0 ].pageY - windowHalfY;
+						}
+					}
+		
+					//
+		
+					function loop() {
+		
+					for(var i = 0; i<particles.length; i++)
+						{
+		
+							var particle = particles[i]; 
+							particle.updatePhysics(); 
+			
+							with(particle.position)
+							{
+								if(y<-1000) y+=2000; 
+								if(x>1000) x-=2000; 
+								else if(x<-1000) x+=2000; 
+								if(z>1000) z-=2000; 
+								else if(z<-1000) z+=2000; 
+							}				
+						}
+					
+						camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+						camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+						camera.lookAt(scene.position); 
+						renderer.render( scene, camera );	
+					}
+		
+		</script>
+	</body>
+	 <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+</html> 

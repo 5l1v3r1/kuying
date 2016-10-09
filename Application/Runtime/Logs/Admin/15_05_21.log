@@ -1,0 +1,1462 @@
+[ 2015-05-21T09:01:46+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-05-21T09:02:45+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.008001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 47 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 47 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 51 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `kuying_user` [ RunTime:0.002001s ]
+ERR: 1146:La table 'kuying_db.kuying_user' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `kuying_user`
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: infonum C:\wamp\www\kuying\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 215 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T09:02:49+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432170169534
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:12:06+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432174326855
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:13:08+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432174388,'再次好价！德国博朗cruZer3 电动剃须刀 亚马逊中国259元包邮',0,'型男必备！德国博朗1921年在德国法兰克福奠下基业，以精致的设计缔造出一个又一个经典，成为德国设计的典范。旗下10大类200多种产品涵盖男士剃须、女士脱毛、美发护发等，成为全球小家电巨头。\r\n这款博朗电动剃须刀这个集剃须、塑形、修剪于一体的时尚装备可以将您任何面部毛发塑造成为时尚前卫的胡须，让您体验亲密的剃感、灵巧的修剪与清晰的胡须轮廓。cruZer3面部系列采用博朗干式剃须刀的前沿技术并继承其优良性能。\r\n亚马逊中国Z秒杀报价259元包邮，再次秒杀特价，同款1号店最低299元，天猫319元。','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://www.shihuo.cn/youhui/99993.html#qk=youhui_list&amp;page=1&amp;order=2',1,0) [ RunTime:0.003000s ]
+
+[ 2015-05-21T10:13:11+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432174391491
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:35:29+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432175729202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.006000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:36:10+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.006000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432175770,'再次好价！德国博朗cruZer3 电动剃须刀 亚马逊中国259元包邮',0,'型男必备！德国博朗1921年在德国法兰克福奠下基业，以精致的设计缔造出一个又一个经典，成为德国设计的典范。旗下10大类200多种产品涵盖男士剃须、女士脱毛、美发护发等，成为全球小家电巨头。\r\n这款博朗电动剃须刀这个集剃须、塑形、修剪于一体的时尚装备可以将您任何面部毛发塑造成为时尚前卫的胡须，让您体验亲密的剃感、灵巧的修剪与清晰的胡须轮廓。cruZer3面部系列采用博朗干式剃须刀的前沿技术并继承其优良性能。\r\n亚马逊中国Z秒杀报价259元包邮，再次秒杀特价，同款1号店最低299元，天猫319元。','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://www.shihuo.cn/',1,0) [ RunTime:0.003000s ]
+
+[ 2015-05-21T10:36:14+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432175774046
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:39:40+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432175980208
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:40:05+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176005,'再次好价！德国博朗cruZer3 电动剃须刀 亚马逊中国259元包邮',0,'dadfafafdafdafa','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1',1,0) [ RunTime:0.003000s ]
+
+[ 2015-05-21T10:40:10+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176009977
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:40:24+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176024008
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.007001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:41:17+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176077263
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:41:28+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176088,'ddddd',0,'ddddd','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1',1,0) [ RunTime:0.002000s ]
+
+[ 2015-05-21T10:41:30+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176090486
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:42:45+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176165097
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.002000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:43:06+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176186,'dddd',0,'dddddddddddd','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1',1,0) [ RunTime:0.004000s ]
+
+[ 2015-05-21T10:43:10+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176190793
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:43:47+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176227730
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:44:05+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176245,'ddddcxc',0,'xcvzvagadgag','&lt;p&gt;http://www.shihuo.cn/youhui/99993.html#qk=youhui_list&amp;amp;page=1&amp;amp;order=2&lt;/p&gt;&lt;p&gt;http://www.shihuo.cn/youhui/99993.html#qk=youhui_list&amp;amp;page=1&amp;amp;order=2&lt;br /&gt;&lt;/p&gt;','http://www.shihuo.cn/youhui/99993.html#qk=youhui_list&amp;page=1&amp;order=2',1,0) [ RunTime:0.003000s ]
+
+[ 2015-05-21T10:44:08+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176248823
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.006001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:48:18+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176498659
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:49:20+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176560,'dafxxxxxxxxxxxxx',0,'xxxxxxxxxxxxxxxxxx','&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;/p&gt;&lt;p&gt;http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1&lt;br /&gt;&lt;/p&gt;','http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1',1,0) [ RunTime:0.001000s ]
+
+[ 2015-05-21T10:49:29+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176569580
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:49:41+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176581619
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:49:42+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176582438
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:49:43+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176583019
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:52:20+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432176740347
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T10:52:38+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: INSERT INTO `kuying_goods` (`TIME`,`TITLE`,`GOOD_SORT`,`INFO_TXT`,`INFO_IMG`,`GOOD_SRC`,`OR_INDEX`,`OR_TOP`) VALUES (1432176758,'xxxxx',0,'ddddddddddddddddddddddd','http://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.htmlhttp://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.html','http://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.html',1,0) [ RunTime:0.002000s ]
+
+[ 2015-05-21T10:52:41+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432176761508
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:21:30+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/1?_=1432178490369
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:21:44+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/9?_=1432178504836
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 9 LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:21:53+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.007000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.006001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.012000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='xxxxx',`GOOD_SORT`=0,`INFO_TXT`='ddddddddddddddddddddddd',`INFO_IMG`='&lt;p&gt;http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpg&lt;/p&gt;&lt;p&gt;http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpg&lt;br /&gt;&lt;/p&gt;',`GOOD_SRC`='http://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.html',`OR_INDEX`=0,`OR_TOP`=0 WHERE `id` = 9 [ RunTime:0.006001s ]
+
+[ 2015-05-21T11:21:57+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='xxxxx',`GOOD_SORT`=0,`INFO_TXT`='ddddddddddddddddddddddd',`INFO_IMG`='&lt;p&gt;http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpg&lt;/p&gt;&lt;p&gt;http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpg&lt;br /&gt;&lt;/p&gt;',`GOOD_SRC`='http://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.html',`OR_INDEX`=1,`OR_TOP`=0 WHERE `id` = 9 [ RunTime:0.001000s ]
+
+[ 2015-05-21T11:22:25+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432178545340
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.007001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:22:54+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/9?_=1432178573939
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 9 LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:22:56+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003001s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='xxxxx',`GOOD_SORT`=0,`INFO_TXT`='ddddddddddddddddddddddd',`INFO_IMG`='http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpghttp://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpg',`GOOD_SRC`='http://www.kyhd.net/index.php/home/index/showhdcontent/fid/1432135993373.html',`OR_INDEX`=0,`OR_TOP`=0 WHERE `id` = 9 [ RunTime:0.001000s ]
+
+[ 2015-05-21T11:23:00+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432178580756
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:23:50+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/1?_=1432178630558
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:23:54+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.006000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='新品特价！乐心BonBonC智能运动手环 天猫商城79元包邮（返现10元）',`GOOD_SORT`=0,`INFO_TXT`='超高性价比！乐心lifesense，医疗健康电子产品与医疗健康平台技术提供商，总部位于广东中山；中国无线健康产品的创新实践者，其产品主要包括GPRS远程血压计、智能蓝牙健康秤、运动智能手环、儿童身高测量仪等。\r\n这款乐心BonBonC智能运动手环可与微信朋友圈运动PK，无PK，不运动！在微信中可以自动生成排行榜，戴上BONBON，与好友尽情PK！用微信量化每天运动，自动同步微信，随时获取步数，卡路里消耗，运动距离等运动数据，激励与监督自己坚持运动。\r\n目前天猫商城新品首发，特价79元，返现10元，实际只要69元包邮，历史最低，热爱运动的朋友们可以入手了。',`INFO_IMG`='http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpghttp://img03.taobaocdn.com/imgextra/i3/765391429/TB2fLEGcpXXXXblXXXXXXXXXXXX_!!765391429.jpg_.webp',`GOOD_SRC`='http://detail.tmall.com/item.htm?id=44338966986&amp;ali_trackid=2:mm_31576222_7290065_27000245:1432134356_2k2_1053560364&amp;clk1=d05a496ebd90f54ffafa56d26bb9fa24&amp;skuId=80501205073',`OR_INDEX`=0,`OR_TOP`=0 WHERE `id` = 1 [ RunTime:0.002000s ]
+
+[ 2015-05-21T11:24:50+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/1?_=1432178690744
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:26:44+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/1?_=1432178804723
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:26:49+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='新品特价！乐心BonBonC智能运动手环 天猫商城79元包邮（返现10元）',`GOOD_SORT`=0,`INFO_TXT`='超高性价比！乐心lifesense，医疗健康电子产品与医疗健康平台技术提供商，总部位于广东中山；中国无线健康产品的创新实践者，其产品主要包括GPRS远程血压计、智能蓝牙健康秤、运动智能手环、儿童身高测量仪等。\r\n这款乐心BonBonC智能运动手环可与微信朋友圈运动PK，无PK，不运动！在微信中可以自动生成排行榜，戴上BONBON，与好友尽情PK！用微信量化每天运动，自动同步微信，随时获取步数，卡路里消耗，运动距离等运动数据，激励与监督自己坚持运动。\r\n目前天猫商城新品首发，特价79元，返现10元，实际只要69元包邮，历史最低，热爱运动的朋友们可以入手了。',`INFO_IMG`='http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpghttp://img03.taobaocdn.com/imgextra/i3/765391429/TB2fLEGcpXXXXblXXXXXXXXXXXX_!!765391429.jpg_.webp',`GOOD_SRC`='http://detail.tmall.com/item.htm?id=44338966986&amp;ali_trackid=2:mm_31576222_7290065_27000245:1432134356_2k2_1053560364&amp;clk1=d05a496ebd90f54ffafa56d26bb9fa24&amp;skuId=80501205073',`OR_INDEX`=1,`OR_TOP`=0 WHERE `id` = 1 [ RunTime:0.003000s ]
+
+[ 2015-05-21T11:27:24+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/2?_=1432178844825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T11:27:28+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.006000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='再次好价！德国博朗cruZer3 电动剃须刀 亚马逊中国259元包邮',`GOOD_SORT`=0,`INFO_TXT`='型男必备！德国博朗1921年在德国法兰克福奠下基业，以精致的设计缔造出一个又一个经典，成为德国设计的典范。旗下10大类200多种产品涵盖男士剃须、女士脱毛、美发护发等，成为全球小家电巨头。\r\n这款博朗电动剃须刀这个集剃须、塑形、修剪于一体的时尚装备可以将您任何面部毛发塑造成为时尚前卫的胡须，让您体验亲密的剃感、灵巧的修剪与清晰的胡须轮廓。cruZer3面部系列采用博朗干式剃须刀的前沿技术并继承其优良性能。\r\n亚马逊中国Z秒杀报价259元包邮，再次秒杀特价，同款1号店最低299元，天猫319元。',`INFO_IMG`='http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/700/interlace/1http://shihuo.hupucdn.com/ucditor/20150512/61c4a124827244674c434ec3da5a72c11431391994.png?imageView2/2/w/70',`GOOD_SRC`='http://www.shihuo.cn/youhui/99993.html#qk=youhui_list&amp;page=1&amp;order=2',`OR_INDEX`=1,`OR_TOP`=0 WHERE `id` = 2 [ RunTime:0.001000s ]
+
+[ 2015-05-21T11:29:47+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/foreverdelete/navTabId/goods_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+
+[ 2015-05-21T11:29:49+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432178988983
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.007000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T21:39:17+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432215557193
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T21:39:18+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432215558445
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T23:01:38+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/add/navTabId/goods_index?_=1432220497980
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 31 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\346dfcdf6ec8d3c93d33b5eb4f636a21.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T23:40:05+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/edit/id/1?_=1432222805460
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `kuying_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: navTabId C:\wamp\www\kuying\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+
+[ 2015-05-21T23:40:10+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Goods/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.003000s ]
+SQL: UPDATE `kuying_goods` SET `TITLE`='新品特价！乐心BonBonC智能运动手环 天猫商城79元包邮（返现10元）',`GOOD_SORT`=0,`INFO_TXT`='超高性价比！乐心lifesense，医疗健康电子产品与医疗健康平台技术提供商，总部位于广东中山；中国无线健康产品的创新实践者，其产品主要包括GPRS远程血压计、智能蓝牙健康秤、运动智能手环、儿童身高测量仪等。\r\n这款乐心BonBonC智能运动手环可与微信朋友圈运动PK，无PK，不运动！在微信中可以自动生成排行榜，戴上BONBON，与好友尽情PK！用微信量化每天运动，自动同步微信，随时获取步数，卡路里消耗，运动距离等运动数据，激励与监督自己坚持运动。\r\n目前天猫商城新品首发，特价79元，返现10元，实际只要69元包邮，历史最低，热爱运动的朋友们可以入手了。',`INFO_IMG`='http://img02.taobaocdn.com/bao/uploaded/i2/TB1vSHhHpXXXXaXapXXXXXXXXXX_!!0-item_pic.jpg_430x430.jpghttp://img03.taobaocdn.com/imgextra/i3/765391429/TB2fLEGcpXXXXblXXXXXXXXXXXX_!!765391429.jpg_.webp',`GOOD_SRC`='http://detail.tmall.com/item.htm?id=44338966986&amp;ali_trackid=2:mm_31576222_7290065_27000245:1432134356_2k2_1053560364&amp;clk1=d05a496ebd90f54ffafa56d26bb9fa24&amp;skuId=80501205073',`OR_INDEX`=1,`OR_TOP`=0 WHERE `id` = 1 [ RunTime:0.002000s ]
+
+[ 2015-05-21T23:40:13+08:00 ] 127.0.0.1 /kuying/index.php/Admin/goods/index?_=1432222813623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('28','26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_goods` [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_goods` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\GoodsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_goods` ORDER BY TIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: categorylist C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 12 行.
+NOTIC: [8] Undefined index: goods_name C:\wamp\www\kuying\Application\Runtime\Cache\Admin\7460c3bd08e8aaf3e719467d6ea19bd3.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant BIND_MODULE already defined C:\wamp\www\kuying\index.php 第 29 行.
+

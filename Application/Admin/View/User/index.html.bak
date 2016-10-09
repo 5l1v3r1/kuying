@@ -1,0 +1,115 @@
+<script type="text/javascript">
+$(function()
+{
+	//双击表格弹出窗口信息
+	$.extend({'getInfo':function(id){
+		$.pdialog.open("__URL__/showinfo/id/"+id,"dialog","查看会员信息",{maxable:false,mask:true,width:500,height:300});
+	}});
+});
+</script>
+
+<!--查询条件-->
+<div class="pageHeader">
+	<form id="pagerForm" action="__URL__" method="post" onsubmit="return navTabSearch(this)">
+    	<input type="hidden" name="pageNum" value="{$currentPage}" />
+        <input type="hidden" name="numPerPage" value="{$numPerPage}" />
+        <input type="hidden" name="handle_name" value="admin_user_search" />
+    	<div class="searchBar">
+        	<ul class="searchContent">
+            	<li>
+                	<label>查找范围：</label>
+                    <select name="keytype">
+                    	<option value="USERNAME" <if condition="$Think.post.keytype eq 'USERNAME'">selected</if>>用户名</option>
+                        <option value="EMAIL" <if condition="$Think.post.keytype eq 'EMAIL'">selected</if>>邮箱</option>
+                    </select>
+                </li>
+                <li>
+                	<label>关键字：</label>
+                    <input name="keyword" type="text" size="25" value="{$Think.post.keyword}"  />
+                </li>
+            </ul>
+            <div class="subBar">
+            	<ul>
+                	<li>
+                    	<div class="buttonActive">
+                        	<div class="buttonContent">
+                            	<button type="submit">查询</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <!--操作按钮-->
+    <div class="panelBar">
+    	<ul class="toolBar">
+        	<li><a class="add" href="__URL__/add/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" rel="user_add" mask="true" maxable="false" width="550"><span>新增</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" posttype="string" rel="id" target="selectedTodo" title="确定要删除选中的记录吗？" warn="请至少选择一位用户"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_user}" target="dialog" mask="true" warn="请选择一条记录" width="550" height="380" rel="user_edit" ><span>编辑</span></a></li>
+            <li><a class="delete" href="__MODULE__/ExportExcel/index/module_name/{$Think.CONTROLLER_NAME}" target="dwzExport" targetType="navTab" title="确定要导出所有记录吗？"><span>导出Excel</span></a></li>
+            <li class="line"></li>
+            <li><a class="icon" href="__URL__/password/id/{sid_user}" target="dialog" mask="true" maxable="false" warn="请选择一条记录" width="420" height="200"><span>修改密码</span></a></li>
+        </ul>
+    </div>
+    <!--操作按钮结束-->
+
+    <!--数据显示-->
+    <table class="list" width="100%" layoutH="115">
+    	<thead>
+        	<tr>
+            	<th width="8%"><input type="checkbox" group="id" class="checkboxCtrl" /></th>
+                <th width="8%">编号</th>
+                <th width="8%">用户名</th>
+                <th width="12%">邮箱</th>
+                <th width="8%">密码</th>
+                <th width="8%">last签到</th>
+                <th width="8%">last抽奖</th>
+                <th width="8%">抽奖次数</th>
+                <th width="8%">用户组</th>
+                <th width="8%">积分</th>
+                <th width="8%">注册时间</th>
+                <th width="8%">注册状态</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<volist id="vo" name="list">
+                <tr target="sid_user" rel="{$vo['id']}" ondblclick="$.getInfo({$vo['id']})">
+                    <td><input type="checkbox" name="id" value="{$vo['id']}" /></td>
+                    <td>{$vo['id']}</td>
+                    <td>{$vo['USERNAME']}</td>
+                    <td>{$vo['EMAIL']}</td>
+                    <td>{$vo['PASSWORD']}</td>
+                    <td>{$vo['SIGN_TIME']}</td>
+                    <td>{$vo['GETS_TIME']}</td>
+                    <td>{$vo['GETS_COUNT']}</td>
+                    <td>{$vo['USER_GROUP']}</td>
+                    <td>{$vo['USER_SCORE']}</td>
+                    <td>{$vo['REGTIME']}</td>
+                    <td><if condition="$vo['REG_FLAG'] eq 1">已验证<else/>未验证</if></td>
+                </tr>
+          </volist>
+        </tbody>
+    </table>
+    <!--数据显示结束-->
+
+    <!--数据分页-->
+    <div class="panelBar">
+    	<div class="pages">
+        	<span>共&nbsp;{$totalCount}&nbsp;条,&nbsp;</span>
+                <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                  <option value="10" <eq name="numPerPage" value="10">selected</eq>>10</option>
+                  <option value="15" <eq name="numPerPage" value="15">selected</eq>>15</option>
+                  <option value="20" <eq name="numPerPage" value="20">selected</eq>>20</option>
+                  <option value="50" <eq name="numPerPage" value="50">selected</eq>>50</option>
+                  <option value="100" <eq name="numPerPage" value="100">selected</eq>>100</option>
+           	 	</select>
+            <span>&nbsp;条&nbsp;/&nbsp;页</span>
+        </div>
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+    </div>
+    <!--数据分页结束-->
+</div>

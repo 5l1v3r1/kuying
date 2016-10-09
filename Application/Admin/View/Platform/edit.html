@@ -1,0 +1,43 @@
+<div class="pageContent">
+	<form method="post" action="__MODULE__/platform/update" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$Think.request.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+            	<label>支付平台：</label>
+                <input type="text" name="platform" class="required" size="33" maxlength="20" value="{$vo.platform}" />
+            </div>
+            <div class="unit">
+            	<label>支付平台(英)：</label>
+                <input type="text" name="platform_en" class="required" size="33" maxlength="20" value="{$vo.platform_en}" />
+            </div>
+            <div class="unit">
+            	<label>支付账户：</label>
+                <input type="text" name="seller" class="required" size="33" maxlength="50" value="{$vo.seller}" />
+            </div>
+            <div class="unit">
+            	<label>合作者身份：</label>
+                <input type="text" name="partner" class="required" size="33" maxlength="50" value="{$vo.partner}" />
+            </div>
+            <div class="unit">
+            	<label>安全检验码：</label>
+                <input type="text" name="key" class="required" size="33" maxlength="50" value="{$vo.key}" />
+            </div>
+            <div class="unit">
+            	<label>默认：</label>
+                <select name="status">
+                	<option value="1" <if condition="$vo.status eq 1">selected</if>>是</option>
+                    <option value="0" <if condition="$vo.status eq 0">selected</if>>否</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="formBar">
+        	<ul>
+            	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

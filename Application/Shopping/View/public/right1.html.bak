@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+		<div class="panel-heading">
+		  <h4 ><strong>热销宝贝</strong></h4>
+		</div>
+		<div >
+			<a target= _blank href="{:U('Zones/show99?p=0');}"><img src="__PUBLIC__/img/loveshop/9_9.gif"></a>
+		</div>
+		<div >
+			<a target= _blank href="{:U('Zones/showOther?z_sort=2');}"><img src="__PUBLIC__/img/loveshop/season.gif"></a>
+		</div>
+		<div >
+			<a target= _blank href="{:U('Zones/showOther?z_sort=3');}" ><img src="__PUBLIC__/img/loveshop/film.gif"></a>
+		</div>
+</div>

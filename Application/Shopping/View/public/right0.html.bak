@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+										<div class="panel-heading">
+										  <h4 ><strong>热销宝贝</strong></h4>
+										</div>
+										<br>
+										<ul class="media-list">
+						         	<foreach name="list0" item="vo">
+			                  <li class="media">
+			                  	<?php $str = $vo['INFO_IMG']; $str = explode("http",$str);?>
+			                      <a target= _blank href="{:U('Index/showGood?id='.$vo['id'].'');}" class="pull-left" href=""><img style="height:60px;width: 60px;" src="http{$str[1]}"></a>
+			                      <a target= _blank href="{:U('Index/showGood?id='.$vo['id'].'');}">
+				                      <div class="media-body">
+				                          <h6 class="text-danger"><strong>{$vo.TITLE}</strong></h6>
+				                      </div>
+			                      </a>
+			                      
+			                  </li>
+			                  <hr>
+			                </foreach>
+			              </ul>
+</div>

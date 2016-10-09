@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN"> 
+  <head>
+    <title> 酷影网www.kyhd.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高清,1080p,720p,蓝光，爱微淘">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/check.js"></script>
+  </head>
+  <style>
+  	hr
+  	{
+  		margin-top: -4px;
+  		margin-bottom:0px;
+  	}
+  	p
+  	{
+  		
+			line-height: 34px;
+			color: #2b2b2b;
+			padding: 10px 15px 15px 15px;
+			word-wrap: break-word;
+  	}
+  	.jumbotron p {
+			font-size: 16px;
+		}
+  	
+  </style>
+  <body style=" FONT-FAMILY: 微软雅黑">
+    <!--NAV-->
+    <include file="./Application/Home/View/public/header.html" />
+		<!--NAV END-->
+    <div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="margin-top:100px;margin-bottom:0px;padding:0px;background-color:white;" >
+    	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;">
+      	<!--left-->
+      	<div class="col-md-9" style="padding-left:5px;margin-left:0px;" >	
+      		<div class="row" style="padding:0px;margin-left:0px;background-color:#fafafa;">
+      			<div class="col-md-8">
+      				<h4 class="text-primary"><img src="__PUBLIC__/img/tools/thid.gif" ><strong>&nbsp<?php echo date('Y/m/d',$list['UP_TIME']); ?>迅雷免费会员帐号分享&nbsp</strong><small>分享就是这么简单</small></h4>
+		          <div class="thumbnail" style="height:auto;">
+		            <p>{$list['T_LIST']}</p>
+		          </div>
+				    </div>
+				    <div class="col-md-4">
+				    	<h4 class="text-primary"><img src="__PUBLIC__/img/tools/wordnet.gif" ><strong>&nbsp热门字幕搜索网站推荐&nbsp</strong></h4>
+		          <div class="thumbnail" style="height:390px;padding-top:10px;">
+		          	<strong><span class="label label-danger">1</span>&nbsp&nbsp<a target="_blank" href="http://sub.makedie.me/"> 射手网(mask)</a></strong><br>
+                <a  href="http://sub.makedie.me/"  target="_blank"><img title="射手网" src="__PUBLIC__/img/tools/spnet.gif" style="width:80%;"></a>
+                <div style="border-bottom:1px solid #999;margin-top:4px;margin-bottom:10px; "></div>	
+                <strong><span class="label label-danger">2</span>&nbsp&nbsp<a target="_blank" href="http://sub.eastgame.org/"> TLF字幕组</a></strong><br>
+                <a  href="http://sub.eastgame.org/"  target="_blank"><img title="TLF字幕组" src="__PUBLIC__/img/tools/tft.gif" style="width:80%;"></a>
+                <div style="border-bottom:1px solid #999;margin-top:4px; margin-bottom:10px;"></div>	
+                <strong><span class="label label-danger">3</span>&nbsp&nbsp<a target="_blank" href="http://www.zimuku.net/"> 字幕库</a></strong><br>
+                <a  href="http://www.zimuku.net/"  target="_blank"><img title="字幕库" src="__PUBLIC__/img/tools/zmk.gif" style="width:80%;"></a>
+                <div style="border-bottom:1px solid #999;margin-top:4px;margin-bottom:10px; "></div>		          
+		          </div>
+				    </div>
+      		</div>
+      		<!--BT TOP -->
+      	</div>	
+      <!--right-->
+      	<include file="./Application/Home/View/public/hdbd/showlistright.html" />
+			</div>	
+      <!--right END-->	
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","qzone","tsina","renren","tieba","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina","renren","tieba","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>   
+      <br>  
+    </div>
+    <include file="./Application/Home/View/public/bottom.html" />
+		<!-- 回到顶部 -->
+		<include file="./Application/Home/View/public/re_top.html" />
+    <!-- 回到顶部 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","qzone","tsina","renren","tieba","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina","renren","tieba","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+   
+  </body>
+	
+</html> 

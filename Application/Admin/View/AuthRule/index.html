@@ -1,0 +1,40 @@
+<div class="pageContent">
+    <!--操作按钮-->
+    <div class="panelBar">
+    	<ul class="toolBar">
+        	<li><a class="add" href="__MODULE__/authRule/add/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" mask="true" maxable="false" width="550"><span>新增</span></a></li>
+            <li><a class="delete" href="__MODULE__/authRule/foreverdelete/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" posttype="string" rel="id" target="selectedTodo" title="确定要删除选中的记录吗？" warn="请至少选择一条记录"><span>删除</span></a></li>
+            <li><a class="edit" href="__MODULE__/authRule/edit/id/{sid_authrule}/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" mask="true" warn="请选择一条记录" width="550" height="380"><span>编辑</span></a></li>
+        </ul>
+    </div>
+    <!--操作按钮结束-->
+
+    <!--数据显示-->
+    <table class="list" width="100%" layoutH="115">
+    	<thead>
+        	<tr>
+            	<th width="10%"><input type="checkbox" group="id" class="checkboxCtrl" /></th>
+                <th width="15%">编号</th>
+                <th width="20%">规则标识</th>
+                <th width="20%">规则名称</th>
+                <th width="10%">状态</th>
+                <th width="15%">条件</th>
+                <th width="10%">导航显示</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<volist id="vo" name="list">
+                <tr target="sid_authrule" rel="{$vo['id']}">
+                    <td><input type="checkbox" name="id" value="{$vo['id']}" /></td>
+                    <td>{$vo['id']}</td>
+                    <td style="text-align:left">{$vo['name']}</td>
+                    <td style="text-align:left">{$vo['title']}</td>
+                    <td><if condition="$vo['status'] eq 1">启用<else/>停用</if></td>
+                    <td>{$vo['condition']}</td>
+                    <td><if condition="$vo['isnavshow'] eq 1">是<else/>否</if></td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <!--数据显示结束-->
+</div>

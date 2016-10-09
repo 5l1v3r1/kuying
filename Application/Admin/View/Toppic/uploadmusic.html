@@ -1,0 +1,44 @@
+<script type="text/javascript" src="__PUBLIC__/backend/uploadify/jquery.uploadify.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/backend/uploadify/uploadify.css" />
+<style type="text/css">
+    .uploadify-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+    .uploadify:hover .uploadify-button {
+        background-color: transparent;
+    }
+</style>
+
+<div class="pageContent">
+	<form enctype="multipart/form-data">
+    	<div class="pageFormContent" layoutH="58">
+        	<input id="file_uploads" name="file_uploads" type="file"   multiple="true">
+            <div id="image" class="image"></div>   
+            <script type="text/javascript">
+			
+			$(function()
+			{
+				$('#file_uploads').uploadify({
+					'fileTypeDesc' : 'MP3 Files',				//类型描述
+					'fileTypeExts' : '*.mp3',		//允许类型
+					'fileSizeLimit' : '10MB',					//允许上传最大值
+					'swf'      : '__PUBLIC__/backend/uploadify/uploadify.swf',	//加载swf
+					'uploader' : '__CONTROLLER__/uploadifymusic',					//上传路径
+					'buttonImage' : '__PUBLIC__/backend/uploadify/browse-btn.png',
+					'onUploadSuccess' : function(file, data, response) {	//成功上传返回
+						alert(data);
+					}
+				});
+			});
+			</script>
+        </div>
+        
+        <div class="formBar">
+        	<ul>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

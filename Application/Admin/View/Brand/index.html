@@ -1,0 +1,77 @@
+<!--查询条件-->
+<div class="pageHeader">
+	<form id="pagerForm" action="__URL__" method="post" onsubmit="return navTabSearch(this)">
+    	<div class="searchBar">
+        	<ul class="searchContent">
+                <li style="width:300px;">
+                    <label>商品分类名称：</label>
+                    <select name="cat_id">
+                    	<option value="0" <if condition="$Think.request.cat_id eq 0">selected</if>>无</option>
+                        <volist name="categorylist" id="vocategory">
+                            <option value="{$vocategory.id}" <if condition="$vocategory.id eq $cat_id">selected</if>>{$vocategory.cat_name}</option>
+                        </volist>
+                    </select>
+                </li>
+            	<li style="width:300px;">
+                	<label>楼层分类名称：</label>
+                    <select name="floor_id" style="width:130px;">
+                    	<option value="0" <if condition="$Think.request.floor_id eq 0">selected</if>>无</option>
+                    	<volist name="floorlist" id="vofloor">
+                    		<option value="{$vofloor.id}" <if condition="$vofloor.id eq $floor_id">selected</if>>{$vofloor.name}</option>
+                        </volist>
+                    </select>
+                </li>
+            </ul>
+            <div class="subBar">
+            	<ul>
+                	<li>
+                    	<div class="buttonActive">
+                        	<div class="buttonContent">
+                            	<button type="submit">查询</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <!--操作按钮-->
+    <div class="panelBar">
+    	<ul class="toolBar">
+        	<li><a class="add" href="__URL__/add/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" rel="brand_add" mask="true" maxable="false" width="500" height="350"><span>新增</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" posttype="string" rel="id" target="selectedTodo" title="确定要删除选中的记录吗？" warn="请至少选择一位用户"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_user}" target="dialog" mask="true" warn="请选择一条记录" width="500" height="350" rel="brand_edit"><span>编辑</span></a></li>
+        </ul>
+    </div>
+    <!--操作按钮结束-->
+
+    <!--数据显示-->
+    <table class="list" width="100%" layoutH="115">
+    	<thead>
+        	<tr>
+            	<th width="10%"><input type="checkbox" group="id" class="checkboxCtrl" /></th>
+                <th width="10%">编号</th>
+                <th width="25%">品牌名称</th>
+                <th width="20%">品牌LOGO</th>
+                <th width="20%">官网地址</th>
+                <th width="15%">排序</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<volist id="vo" name="list">
+                <tr target="sid_user" rel="{$vo['id']}">
+                    <td><input type="checkbox" name="id" value="{$vo['id']}" /></td>
+                    <td>{$vo['id']}</td>
+                    <td>{$vo['brand_name']}</td>
+                    <td><img src="__UPLOAD__{$vo['brand_logo']}" width="98" height="35" /></td>
+                    <td style="text-align:left;">{$vo['brand_url']}</td>
+                    <td>{$vo['brand_sort']}</td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <!--数据显示结束-->
+</div>

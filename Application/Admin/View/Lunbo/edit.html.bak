@@ -1,0 +1,33 @@
+<style type="text/css">
+.pageFormContent span { padding-left:0;}
+</style>
+
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/update" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this,dialogAjaxDone);">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$Think.request.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+            	<label>GOOD_ID：</label>
+              <input type="text" name="GOOD_ID" class="required number" size="50" maxlength="30" value="{$vo.FID}" />
+          </div>
+          <div class="unit">
+            	<label>MODEL：</label>
+								<select name="MODEL">
+									<option value="{$vo.MODEL}">默认{$vo.MODEL}</option>
+              		<option value="Index/showHDcontent">高清电影区</option>
+									<option value="Index/showZYcontent">高清综艺区</option>
+									<option value="Index/showBDcontent">小容量电影区</option>
+									<option value="Index/showJucontent">高清电视剧</option>
+								</select>	
+          </div>
+        
+        <div class="formBar">
+        	<ul>
+            	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

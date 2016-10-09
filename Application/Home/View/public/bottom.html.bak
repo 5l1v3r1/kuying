@@ -1,0 +1,45 @@
+<div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="border-top:3px solid #000;margin-top:0px;margin-bottom:0px;padding:8px;background-color:#fafafa;"    >
+	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;" >
+		<!--left-->
+		<div class="col-md-3" style="padding-top:3%;padding-left:5%;margin-left:0px;" >
+			<!--bt-->
+			<img src="__PUBLIC__/img/icon/logo.gif" />
+			<h4 color="#fafafa"><small>&nbsp&nbsp&nbsp&nbsp践行互联网分享精神，</br> </br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp打造属于大家的酷影！</small></h4>
+			<!--BT start -->
+	  	<div class="row" style="padding:0px;margin-left:0px;background-color:#fafafa;" >
+	    </div>
+		</div>
+		<div class="col-md-3" style="padding-left:5px;margin-left:0px;" >
+			<!--bt-->
+			
+			<blockquote>
+				<h4 color="#fafafa">联系我们</h4>
+				<h5 color="#fafafa">网 址：www.kyhd.net</h5>
+				<h5 color="#fafafa">站长邮箱：net33ph@yeah.net</h5>
+				<h5 color="#fafafa">站长QQ：1448474396</h5>
+				<h5 color="#fafafa">酷影交流群：324860696</h5>
+			</blockquote>	
+		</div>
+		<div class="col-md-3" style="padding-left:5px;margin-left:0px;" >
+			<!--bt-->
+			<blockquote>
+				<h4 color="#fafafa">关注微信公众账号</h4>
+				<img src="__PUBLIC__/img/icon/weixin.gif">
+			</blockquote>	
+		</div>
+		<div class="col-md-3" style="padding-left:5px;margin-left:0px;" >
+			<!--bt-->
+			<blockquote>
+				<h4 color="#fafafa">关注微博</h4>
+				<div class="jiathis_style_32x32">
+					<a class="jiathis_follow_tsina" rel="http://weibo.com/3911891253/profile?topnav=1&wvr=6"></a>
+				</div>
+			</blockquote>	
+		</div>
+	</div> 
+	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;" >
+		<!--left-->
+		<h5 class="text-center">©2015 &nbsp&nbsp酷影网www.kyhd.net&nbsp&nbsp&nbsp&nbsp津ICP证070791号 </h5>
+	</div> 	
+</div> 
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>	

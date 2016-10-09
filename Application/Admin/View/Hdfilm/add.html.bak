@@ -1,0 +1,45 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/insert" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$Think.request.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+            	<label>名称：</label>
+              <input type="text" name="TITLE" class="required textInput" size="200" maxlength="200" value="{$vo.TITLE}" />
+          </div>
+        	<div class="unit">
+            	<label>文字介绍：</label>
+              <input type="text" name="INFO_TXT" class="required textInput" size="50" maxlength="2048" value="{$vo.INFO_TXT}" />
+          </div>
+          <div class="unit">
+            	<label>图片链接：</label>
+              <input type="text" name="INFO_IMG"  class="editor" rows="50" cols="180" value="{$vo.INFO_IMG}" />
+          </div>
+          <div class="unit">
+            	<label>商品链接：</label>
+              <input type="text" name="GOOD_SRC" class="required textInput" size="50" maxlength="2048" value="{$vo.INFO_TXT}" />
+          </div>
+          <div class="unit">
+            	<label>是否首页：</label>
+								<select name="OR_TOP">
+              		<option value="0">不首页</option>
+									<option value="1">首页</option>
+								</select>	
+          </div>
+          <div class="unit">
+            	<label>是否置顶：</label>
+								<select name="OR_INDEX">
+              		<option value="0">不置顶</option>
+									<option value="1">置顶</option>
+								</select>	
+          </div>
+      </div>   
+      <div class="formBar">
+      	<ul>
+          	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+              <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+          </ul>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+/*科e互联特效基本框架CSS结束，应用特效时，以上样式可删除*/
+/* 效果CSS开始 */
+
+.ywcbox { height: 100%; width: 100%; overflow: hidden; }
+.ywcbox ul li { text-align: center; float: left; width: 543px; padding-top: 2px; font-size: 14px; color:#fff; }
+.ywcbox ul li img { margin-bottom: 0px; }
+.ywpng1 { position: absolute; left: 30px; top: 150px; z-index: 1000; cursor: pointer; background: url(../../img/lunbo/1080p/btn1.png); height: 47px; width: 23px; }
+.ywpng2 { position: absolute; right: 30px; top: 150px; z-index: 1000; cursor: pointer; height: 47px; width: 23px; background: url(../../img/lunbo/1080p/btn2.png); }
+/* 效果CSS结束 */
+/* 回到顶部效果CSS开始 */
+
+/*main css (www.sucaijiayuan.com)*/
+.bottom_tools{position:fixed;z-index:1070;right:40px;bottom:40px;}
+.bottom_tools>*{font:0/0 a;display:block;margin-top:5px;color:transparent;border:0;background-color:transparent;text-shadow:none}
+.qr_img{position:absolute;top:-189px;left:-183px;display:none;}
+#scrollUp{width:45px;height:45px;background-image:url(../../img/re_top/backgrounds.32.png);background-position:-54px -53px;display:none;}
+#scrollUp:hover{background-image:url(../../img/re_top/backgrounds.32.png);background-position:-100px -53px}
+#feedback{width:45px;height:45px;background-image:url(../../img/re_top/backgrounds.32.png);background-position:-102px 0}
+#feedback:hover{background-image:url(../../img/re_top/backgrounds.32.png);background-position:-146px -46px}
+.qr_tool{width:45px;height:45px;background-image:url(../../img/re_top/backgrounds.32.png);background-position:-148px 0;cursor:pointer;}
+.qr_tool:hover {width: 45px;height: 45px;background-image: url(../../img/re_top/backgrounds.32.png);background-position: -192px -46px;}
+/* 效果CSS结束 */
+/* 抽奖CSS开始 */
+.rotate-con-pan{background:url(../../img/index/rateimages/dropkick.jpg) no-repeat 0 0;background-size:100% 100%;position:relative;width:320px;height:320px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;margin:0 auto}
+.rotate-con-zhen{width:70px;height:140px;background:url(../../img/index/rateimages/start.png) no-repeat 0 0;background-size:100% 100%;cursor:pointer;position:absolute;left:125px;top:100px;}
+/* 抽奖CSS结束 */
+/* 进入全屏页面CSS开始 */
+.keBody{ background-color: #000044; background: url(../../img/index/enter/bg.gif) repeat-x; overflow:hidden;background-size:cover;height:100%; }

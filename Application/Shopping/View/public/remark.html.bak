@@ -1,0 +1,187 @@
+<div class="container" style="padding:10px;margin-top:0px;margin-bottom:0px;">
+		<div class="row">
+			<h4><strong>用户评论</strong>
+      </h4>
+      <h4 class="text-right">
+      	<a class="text-right" href="###">
+          <span class="glyphicon glyphicon-comment "><strong>发表评论</strong></span>
+        </a>
+      </h4>
+			<hr style="border:1px solid red">
+				<ul class="media-list">
+				         	<foreach name="list_r" item="vo">
+	                  <li class="media">
+	                      <a class="pull-left" href=""><img style="height:50px;width: 50px;border:1px solid #777777;" src="{$vo['USERIMG']}" ></a>
+		                      <div class="media-body" style="padding-left:10px">
+		                          <small>{$vo.USER}</small>
+		                          <p style="font-size: 10px;"><strong>{$vo['REMARK']}</strong>
+		                          </p> 
+		                          <small>
+		                          <ul class="list-inline text-right">
+		                          	<li><?php echo date('Y/m/d H:i:s',$vo['TIME']); ?></li>
+															  <li class = "up_r">
+															  	<a id="{$vo['id']}" >
+													          <span class="glyphicon glyphicon-thumbs-up"></span>
+													        </a>
+													        <label id="l_r{$vo['id']}"> {$vo['DING']} </label>
+															  </li>
+															  <li></li>
+															  <li class = "low_r">
+															  	<a id="{$vo['id']}">
+													          <span class="glyphicon glyphicon-thumbs-down"></span>
+													        </a>
+													        <label id="ll_r{$vo['id']}"> {$vo['LOW']} </label>
+															  </li>
+															</ul>  
+															</small>
+		                      </div>
+	                      
+	                  </li>
+	                  <hr>
+	                </foreach>
+	      </ul>
+			<h4 id="mark"><strong>发表评论</strong></h4>
+			<form role="form" class="form-horizontal" >
+			<div class="form-group">   
+          <div class="col-md-12" > 
+          	<!-- 加载编辑器的容器 --> 
+							<script id="container" name="content" type="text/plain">
+								
+	    				</script>
+	    				<div style="background-color:#fafafa;padding:10px;text-align:right;"><button type="button" class="btn btn-danger" onclick="return button_click();">发布我的评论</button></div>
+          </div>  
+                         
+   
+      </div> 
+    </form>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="__PUBLIC__/other/ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="__PUBLIC__/other/ueditor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container', {
+				    toolbars: [
+				        ['undo', 'redo','cleardoc']
+				    ],
+				    initialFrameHeight:100,
+				    autoFloatEnabled: true,
+				    removeEmptyline: false,
+				    maximumWords: 100,
+				    autoClearinitialContent:true,
+				    indentValue: '2em',
+				    serialize : { 
+						    //黑名单，编辑器会过滤掉以下标签 
+						    blackList:{style:1, link:1,object:1, input:1, meta:1}, 
+						    //白名单，编辑器会根据此配置保留对应标签下的对应标签或者属性 
+						    whiteList:{  
+						    } 
+						},
+				});
+				/*
+				*输出remark action="{:U('Remark/getContent?rfid='.$list['FID'].'&sort=1&p=1')}" method="post"
+				*/
+				var flag =false;
+				function button_click()
+				{
+					
+					var u_uid = "{$_SESSION['u_UID']}";
+					if(u_uid =="")
+					{
+						window.location.href="http://www.kyhd.net/index.php/home/login/loginpage.html";
+					}else
+					{
+						
+						var goodid = {$list['id']};
+						var content =ue.getContent() ;
+						alert(content);
+						if(content == "" || content == null)
+						{
+							alert("亲，评论内容不能为空噢！");
+							return 0;
+						}
+						if(content.length >200)
+						{
+							//alert(content.length);
+							alert("亲，评论内容太长了！");
+							return 0;
+						}
+						if(content.length<9)
+						{
+							alert("亲，评论内容至少三个字符！");
+							return 0;
+						}else
+						{
+							if(flag ==false){
+								flag = true;
+								window.location.replace("__URL__/showGood?id="+goodid+"&cont="+content+"");
+								
+							}
+							
+							return false;
+	
+						}
+					}
+					
+					//alert(content);  
+				}	
+				$(document).ready(function(){
+					$("li.up_r").click(function() 
+				  {  
+				  	//var aobj = $(this).children("span");
+				  	//alert($(aobj[0]).attr("class"));
+				  	var link_id = $(this).children("a").attr('id');
+						var url = '__URL__/update_r_u_d?v=0&id='+link_id;  
+						$.ajax({  
+							type: "get",  
+							url: url,  
+							dataType: "json",  
+							timeout: 1000,//超时时间 
+							success: function(msg)
+							{  
+								//window.location.reload();
+								//$(this).children("label").text(msg);
+								//alert(link_id);
+								if(msg == -1)
+								{
+									alert("亲，休息一下吧，推的太快啦！")
+								}else{
+									$("label#l_r"+link_id).text(msg);
+								}
+								//alert(msg);
+							}  
+						});  
+					});
+					$("li.low_r").click(function() 
+				  {  
+				  	//var aobj = $(this).children("span");
+				  	//alert($(aobj[0]).attr("class"));
+				  	var link_id = $(this).children("a").attr('id');
+						var url = '__URL__/update_u_d?v=1&id='+link_id;  
+						$.ajax({  
+							type: "get",  
+							url: url,  
+							dataType: "json",  
+							timeout: 1000,//超时时间 
+							success: function(msg)
+							{  
+								//window.location.reload();
+								//$(this).children("label").text(msg);
+								//alert(link_id);
+								if(msg == -1)
+								{
+									alert("亲，休息一下吧，推的太快啦！")
+								}else{
+									$("label#ll_r"+link_id).text(msg);
+								}
+								//alert(msg);
+							}  
+						});  
+					});
+					
+				}); 
+				
+    </script>
+    	  
+		</div>
+</div>

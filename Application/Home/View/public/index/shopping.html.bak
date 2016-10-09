@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
+  
+  <head>
+    
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/manager.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/MSClass.js"></script>
+  </head>
+  <style>
+  </style>
+  <script>
+  	$(document).ready(function(){
+		  $("#l1").addClass("active");	
+		  $("#signbtn").click(function() 
+		  {   
+				var url = '__URL__/signEveryday';  
+				$.ajax({  
+					type: "get",  
+					url: url,  
+					dataType: "json",  
+					timeout: 1000,//超时时间 
+					success: function(msg)
+					{  
+						if(msg == 1)
+						{
+							alert("获得5个积分奖励！记得明天继续签到哦");
+						}else if(msg == 2)
+						{
+							alert("对不起，已经签过到了！");
+						}else if(msg == 3)
+						{
+							alert("亲，还木登录，快去登录吧！");
+						}else if(msg == 0)
+						{
+							alert("分数更新失败，可能网络有问题！");
+						}
+					}  
+				});  
+			}); 	  
+		}); 
+  </script>
+ 
+  <body style=" FONT-FAMILY: 微软雅黑">
+    <!--NAV-->
+    <include file="./Application/Home/View/public/header.html" />
+		<!--NAV END-->
+		<!--Carousel start-->
+		<div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="padding:0px;margin-top:0px;margin-bottom:0px;background-color:white;"    draggable="true">
+				<div id="myCarousel" class="carousel slide"  style="padding:0px;margin:0px;">
+				   <!-- 轮播（Carousel）指标 -->
+				   <ol class="carousel-indicators" >
+				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel" data-slide-to="1"></li>
+				      <li data-target="#myCarousel" data-slide-to="2"></li>
+				   </ol>   
+		   <!-- 轮播（Carousel）项目 -->
+				   <div class="carousel-inner" >
+				      <div class="item active" >
+				         <center><img height=400px src="http://mediainfo.tvscn.com:8088/media/ViewMedia/Normal/101827/101827.jpg" alt="First slide"></center>
+				         <div class="carousel-caption">标题 1</div>
+				      </div>
+				      <div class="item" >
+									<center><img height=400px src="http://mediainfo.tvscn.com:8088/media/ViewMedia/Normal/101827/101827.jpg" alt="Second slide"></center>
+									<div class="carousel-caption">标题 2</div>
+				      </div>
+				      <div class="item" >
+				      	
+				         <center><img height=400px src="http://mediainfo.tvscn.com:8088/media/ViewMedia/Normal/101827/101827.jpg"  alt="Third slide"></center>
+				         <div class="carousel-caption">标题 3</div>
+				      </div>
+				      
+				   </div>
+		   <!-- 轮播（Carousel）导航 -->
+				   <div class="container" style="width:1000px">
+				   	<a class="carousel-control left" href="#myCarousel"				      data-slide="prev">&lsaquo;</a>
+				   <a class="carousel-control right" href="#myCarousel"				    data-slide="next">&rsaquo;</a>
+				    </div>
+				</div> 
+    </div>
+    <!--Carousel END-->
+    <div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="margin-top:0px;padding:0px;background-color:white;"    draggable="true">
+    	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;" >
+    		<!--left-->
+      	<div class="col-md-9" style="padding-left:5px;margin-left:0px;" >
+      		<!--bt-->
+      		<h4 color="#fafafa">BT共享区<small>践行互联网精神高清/1080p/720p/BD/美剧...发掘，提供，分享 we do it~</small></h4>
+      		<!--BT start -->
+	      	<div class="row" style="padding:0px;margin-left:0px;background-color:#fafafa;" >
+	        	
+		        	<div class="col-md-6"  style="padding:8px;padding-bottom:0px;margin-left:0px;">
+	          		<div class="thumbnail" >
+			            <div class="caption" style="height:250px;">
+			              <span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=4px> 高清电影BT下载</font><br> 
+			              <span class="badge pull-right">3</span>
+			              <strong ><span class="label label-primary">Hot</span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=1600&p=1');}"> 1080pBT分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-warning">Hot</span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=1700&p=1');}"> 720pBT分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-primary"> RD </span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=1900&p=1');}"> REMUX/原盘BT分享专区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-warning"> CD </span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=2000&p=1');}"> 高清合集BT分享专区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-primary">Hot</span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=1800&p=1');}"> 百度/360网盘分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-warning"> VD </span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=2100&p=1');}"> 高清记录片BT分享专区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+			              <strong><span class="label label-primary">3D </span>&nbsp&nbsp<a href="{:U('Index/showHDList?type=2200&p=1');}"> 3D高清电影BT分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:6px; "></div>
+										<h6> 想要的这里都有 <span class="badge pull-right" >more>></span></h6>
+			            </div>
+	          		</div>	
+	        		</div>
+	        		<div class="col-md-6"  style="padding:8px;padding-bottom:0px;margin-left:0px;">
+	          		<div class="thumbnail" >
+            
+			            <div class="caption" style="height:250px;">
+			              <span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=4px> 小容量电影专区</font><br>
+			              <span class="badge pull-right">3</span>
+			              <strong ><span class="label label-primary">1</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=100&p=1');}"> 韩国高清分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-warning">2</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=200&p=1');}"> 小日本高清分享专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">3</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=300&p=1');}"> 大中华高清分享专区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">4</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=400&p=1');}"> 欧美高清分享区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">5</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=500&p=1');}"> 演唱会/MV/运动体育分享区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">6</span>&nbsp&nbsp<a href="{:U('Index/showZYList?type=600&p=1');}"> 动漫高清分享区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+										<h6> 不要吝啬你的鼠标左键 <span class="badge pull-right" >more>></span></h6>
+			            </div>
+			          </div>	
+	        		
+	          	</div>
+	          	
+	        		<div class="col-md-6"  style="padding:8px;padding-top:0px;padding-bottom:0px;margin-left:0px;">
+	          		<div class="thumbnail" >
+			            <div class="caption" style="height:250px;">
+			              <span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=4px> 小容量电影专区</font><br>
+			              <br>  
+			              <span class="badge pull-right">3</span>
+			              <strong ><span class="label label-primary">1</span>&nbsp&nbsp<a href="{:U('Index/showBDList?type=1200&p=1');}"> BD高清电影下载</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-warning">2</span>&nbsp&nbsp<a href="{:U('Index/showBDList?type=1100&p=1');}"> iPad/MP4电影下载区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">3</span>&nbsp&nbsp<a href="{:U('Index/showBDList?type=1000&p=1');}"> 迅雷MKV</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-warning">4</span>&nbsp&nbsp<a href="{:U('Index/showBDList?type=900&p=1');}"> 亚洲电影下载区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+			              <strong><span class="label label-primary">5</span>&nbsp&nbsp<a href="{:U('Index/showBDList?type=800&p=1');}"> 欧美电影下载区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:8px; "></div>
+										<h6> 爱电影,爱下载,酷影懂你 <span class="badge pull-right" >more>></span></h6>
+			            </div>
+          			</div>	
+	        		
+	          	</div> 
+	          	<div class="col-md-6"  style="padding:8px;padding-top:0px;padding-bottom:0px;margin-left:0px;">
+	          		<div class="thumbnail" >
+            
+			            <div class="caption" style="height:250px;">
+			              <span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=4px> 高清连续剧区</font><br>
+			              <br>  
+			              <span class="badge pull-right">hot</span>
+			              <strong><span class="label label-warning">1</span>&nbsp&nbsp<a href="{:U('Index/showJuList?type=3300&p=1');}">&电视剧下载专区</a></strong><br>
+			              <div style="border-bottom:1px solid #999;margin-bottom:4px; "></div>
+			              <br> 
+			              <strong><span class="label label-primary">2</span>&nbsp&nbsp<a href="{:U('Index/showJuList?type=3400&p=1');}">&美剧下载专区</a></strong><br> 
+			              <div style="border-bottom:1px solid #999;margin-bottom:4px; "></div>
+			              <br> 
+										<h6> 喜欢就下载,无所顾忌 <span class="badge pull-right" >more>></span></h6>
+			            </div>
+			          </div>
+	        		</div>
+	        </div>
+	        <!--TAOBAO start -->
+	        <div class="row" style="padding:0px;margin-left:0px;margin-right:0px;">
+	        	<h3 color="#fafafa">爱微淘<small> Wechat Shopping 质量第一，讲求诚信</small></h3>
+	        	<div class="row" style="padding:8px;margin-left:0px;background-color:#fafafa;">
+	        	
+		          <div class="thumbnail" style="height:auto;">
+		
+		            <div class="row" style="margin-left:5px;margin-right:5px;padding-right:5px; ">
+		              <!--<span class="glyphicon glyphicon-sort-by-attributes-alt" ></span><font size=5px>商务区</font><br>
+		              <br> --> 
+		              <span class="badge pull-right"><a style="color:white">进去看看吧</a></span>
+		            	<strong ><span class="label label-primary">WeChat</span> <a href="" title="淘您最需要的，质量我们保证！">微店产品show</a></strong><br>
+		              <div style="margin-bottom:6px;width:21%; "></div>
+		              <span class="badge pull-right"><a style="color:white">进去看看吧</a></span>
+		              <strong><span class="label label-warning">Cheaper</span><a> 海外代购show</a></strong><br>
+		              <div style="margin-bottom:6px;width:21%; "></div>
+		              <strong><span class="label label-warning">Hot SALE</span><a> 本周热销</a></strong>
+		              <div style="margin-bottom:6px; "></div>
+		              <div class="col-md-12" style="border:1px solid #999;padding:2px;padding-top:6px;margin-right:0px;">
+			              <div class="col-md-3 ">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body" style="margin:0px;padding:0px;">
+						                <h6 class="media-heading">空气净化器</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body" >
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body" >
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body" >
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body" >
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body">
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body">
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+						        <div class="col-md-3">
+						          <ul class="media-list">
+						            <li class="media">
+						              <a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64"></a>
+						              <div class="media-body">
+						                <h6 class="media-heading">空气净化器[美国]</h6>
+						                <h6 class="media-heading">产地:[美国]</h6>
+						                <h6 class="media-heading">国内专柜:</h6>
+						                <h6 class="media-heading">代购价：</h6>
+						              </div>
+						            </li>
+						          </ul>
+						        </div>
+								  </div>
+								  <span class="badge pull-right" ><a style="color:white">更多优质产品</a></span>
+		            </div>
+		          </div>  
+	          </div> 
+	        </div>
+      	</div>
+      <!--right-->
+	      <include file="./Application/Home/View/public/index/listright.html" /> 
+    	</div> 	
+    </div>
+    <include file="./Application/Home/View/public/bottom.html" />
+		<!-- 回到顶部 -->
+		<include file="./Application/Home/View/public/re_top.html" />
+    <!-- 回到顶部 -->
+
+  </body>
+	
+</html> 

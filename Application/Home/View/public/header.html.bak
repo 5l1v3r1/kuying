@@ -1,0 +1,78 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0px;">	
+		   <div class="container">
+			   <div class="navbar-header" style="padding-top:5px;">
+			      <img src="__PUBLIC__/img/icon/logo.gif" />
+			   </div>
+			   <div>
+			      <ul class="nav navbar-nav" style="font-size:17px">
+			         <li id="l1"><a href="{:U('Index/showindex');}">首 页</a></li>
+			         <li id="l2"><a href="{:U('Index/showBTZone');}">BT分享</a></li>
+			        <!--  <li id="l3" ><a href="#">爱微淘</a></li>-->
+			         <li id="l4"><a href="{:U('Login/showMembertips');}">会员福利</a></li>
+			         <li id="l5" class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			               新手必读 
+			               <b class="caret"></b>
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="{:U('Login/showNewsread');}">BT下载方法</a></li>
+			               <li><a href="{:U('Login/showNewsread');}">浏览器乱序解决</a></li>
+			              <!-- <li class="divider"></li>
+			               <li><a href="#">微淘消费必读</a></li>
+			               <li><a href="#">加入微淘商家流程</a></li>-->
+			               <li class="divider"></li>
+			               <li><a href="{:U('Login/showNewsread');}">意见和投诉</a></li>
+			            </ul>
+			         </li>  
+			      </ul>
+			   </div>
+					<form class="bs-example bs-example-form" action="{:U("Index/search?sea_zone=1&s_p=1")}" method="post" role="search">
+			         <div class="col-lg-3" style="padding-top:8px;">
+			            <div class="input-group">
+			               <input type="text" class="form-control" name = "sea_txt" placeholder="Search">
+			               <span class="input-group-btn">
+			                  <button type="submit" class="btn btn-default">Search</button>
+			               </span>
+			            </div><!-- /input-group -->
+			         </div><!-- /.col-lg-6 -->
+					</form>
+				 <div>
+				 	<if condition="session('u_UID')">
+				 				<div class="media">
+									   <a class="pull-left" href="#">
+									   		<if condition="cookie('head')">
+									      	<img src="{$_COOKIE['head']}" style="width:40px;height:40px;margin-top:3px;padding:1px;border:1px solid #777777;"  />
+									      <else />
+									      	<img src="__PUBLIC__/img/icon/userout.gif" style="width:40px;height:40px;margin-top:3px;padding:1px;border:1px solid #777777;"  />
+									      </if>
+									   </a>
+									   <div class="media-body">
+									      <div class="text-primary">欢迎回来:&nbsp<strong>{$_SESSION['u_username']}</strong>！</div>
+									 			<div >
+									 				<label class="text-danger">积分:{$_SESSION['u_score']}&nbsp</label>
+									 				<a id="reg_link" title="访问个人资料" href="{:U('Login/showPerson');}" >我的空间</a>
+									 				&nbsp
+									 				<a id="reg_link" title="退出登录" href="{:U('Login/outlogin');}" >退出</a>
+									 			</div>
+									   </div>
+									</div>
+	 				<else /> 
+	 					
+	 					<p class="navbar-text navbar-right " >
+	 								<ul class="list-inline" style="padding-top:10px;">
+									  
+									  <li><a id="login_link"  title="QQ快速登录" class="navbar-link" href="{:U('Login/loginpage');}" ><img src="__PUBLIC__/img/icon/qqlg.gif"/></a></li>
+									  <li><a id="login_link" title="新浪微博快速登录" class="navbar-link" href="{:U('Login/loginpage');}" ><img src="__PUBLIC__/img/icon/silg.gif"/></a></li>
+									  <li><a id="login_link" title="本地邮箱登录" class="navbar-link" href="{:U('Login/loginpage');}" ><img src="__PUBLIC__/img/icon/kylg.gif"/></a></li>
+									  <li>您好，请登录</li>
+									  <li> <a id="reg_link"   class="navbar-link" href="{:U('Login/register');}" >注册</a></li>
+									</ul>
+					 				
+	 
+	 					</p>
+	 				</if>
+ 				 </div>
+		   </div>
+		</nav>
+
+     

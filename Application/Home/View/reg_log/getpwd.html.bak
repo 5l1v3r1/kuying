@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
+  <head>
+    <title>酷影网www.kyhd.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高清,1080p,720p,蓝光，爱微淘">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/manager.js"></script>
+
+  </head>
+  <style>
+  </style>
+  <script>
+  	$(document).ready(function(){
+		  
+		  $("#fresh").click(function(){
+				//$("#fresh").hide();
+				var vname=$("#imgverify").attr("src");
+ 		 		$("#imgverify").attr("src",vname.replace(/\?.*$/,'')+'?'+Math.random());
+			});	  
+		}); 
+  </script>
+ 
+  <body style=" FONT-FAMILY: 微软雅黑">
+    <!--NAV-->
+    <include file="./Application/Home/View/public/header.html" />
+		<!--NAV END-->
+    <div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="margin-top:50px;margin-bottom:0px;padding:0px;background-color:white;"    draggable="true">
+    	<div class="container" style="padding:9px;margin-top:0px;margin-bottom:0px;" >
+      		<!--bt-->
+	        <!--TAOBAO start -->
+	        <div class="row" style="padding:0px;margin-left:0px;margin-right:0px;">
+	        	<h3 color="#fafafa">找回密码<small> Get your password!</small></h3>
+	        	<div class="row" style="padding:8px;margin-left:0px;background-color:#fafafa;">
+		          	<div class="thumbnail" style="height:auto;">
+			            <div class="row" style="margin-left:5px;margin-right:5px;padding:10px; width:50%;">
+					          
+							          <form role="form" class="form-horizontal" action="{:U("Login/sendPwdInfo")}" method="post">  
+					                <div class="form-group">  
+					                    <label class="col-md-3 control-label" for="name">注册邮箱/UID</label>  
+					                    <div class="col-md-9">  
+					                        <input class="form-control" name="email" type="text" id="email" placeholder="Email" value="" />    
+					                    </div>  
+					                </div> 
+					                <div class="form-group">  
+					                    <label class="col-md-3 control-label" for="exampleInputPassword1">新密码</label>  
+					                    <div class="col-md-9">  
+					                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+					                    </div>  
+					                </div>  
+					                <div class="form-group">  
+					                    <label class="col-md-3 control-label" for="exampleInputPassword2">请再输一遍</label>  
+					                    <div class="col-md-9">  
+					                        <input type="password" name="cfpassword" class="form-control" id="exampleInputPassword2" placeholder="Password">  
+					                    </div>  
+					                </div>
+					                <div class="form-group">
+															<label class="col-md-3 control-label" for="name">验证码</label> 
+						        					<div class="col-md-8">
+											        	<input type="text"  name="verify" class="form-control" id="verify" placeholder="&nbsp&nbsp验证码" style="width:100%；padding-right: 0px;  padding-left: 0px;"  > 
+																<br><span><img id="imgverify" src='{:U('Home/Login/verify',array())}' onClick="this.src=this.src+'?'+Math.random()" />
+											        	</span>	
+											        	<span>
+											        	<a id="fresh" > <font size="2">看不清？换一张 </font></a>	
+											        	</span>	 									        
+											        </div>
+											    </div>  	  		  
+					                <div class="form-group">  
+					                    <div class="col-md-offset-2 col-md-12">  
+					                        <button type="submit" class="btn btn-primary  btn-lg">  
+					                            提 交
+					                        </button>  
+					                    </div>  
+					                </div>  
+			            			</form> 
+			            			
+	            		</div>  
+		        
+		          </div>
+	          </div> 
+	        </div>
+      	
+      <!--right-->
+    	</div> 	
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/messages_zh.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/Form.js"></script>
+    		  <script type="text/javascript" charset="utf-8">  
+            MyValidator.init();  
+        </script> 
+  </body>
+	
+</html> 
+

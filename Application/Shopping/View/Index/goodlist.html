@@ -1,0 +1,212 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
+  <head>
+    <title>创意工坊:最具创意的淘宝/天猫导购服务</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="酷影网创意工坊～折扣创意产品推荐">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">  
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">  
+    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/manager.js"></script>
+		<style>
+  	.page{ padding:10px;}
+		.page div{border-left:1px solid #09F; overflow:hidden;}
+		.page span,.page a{ float:left; height:32px; line-height:32px; padding:0px 10px;background:#fff; border:1px solid #09F; border-left:none; font-size:14px;}
+		.page .current{ background:#09f; color:#fff;}
+  	</style>
+  </head>
+  <body style=" FONT-FAMILY: 微软雅黑">
+	<include file="./Application/Shopping/View/public/top.html" />
+   		<div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="padding:0px;margin-top:10px;margin-bottom:0px;background-color:white;"  draggable="true">
+					<div class="container">
+		        <div class="row">
+		        	<h6>
+			      		<a href="{:U('Index/index');}"><img src="__PUBLIC__/img/icon/index.gif" width=16px > 工坊首页/</a>
+			      		<a href="#">特惠专区/</a>
+			      		{$list['TITLE']}
+			      	</h6>
+		        	<div class="col-md-9">	
+		        		<ul class="list-inline" id="navnav">
+									<li class="text-danger"><strong>宝贝分类：</strong></li>
+									<li class="text-danger"> <a id="a-1" type="button" href="{:U('Index/listgoods?kind=-1&s=0&p=0');}"  class="btn btn-default">全 部</a></li>
+									<li class="text-danger"> <a id="a0" type="button" href="{:U('Index/listgoods?kind=0&s=0&p=0');}"  class="btn btn-default ">运动休闲</a></li>
+									<li class="text-danger"> <a id="a1" type="button" href="{:U('Index/listgoods?kind=1&s=0&p=0');}"  class="btn btn-default">数码电脑</a></li>
+									<li class="text-danger"> <a id="a2" type="button" href="{:U('Index/listgoods?kind=2&s=0&p=0');}"  class="btn btn-default">创意生活</a></li>
+									<li class="text-danger"> <a id="a3" type="button"  href="{:U('Index/listgoods?kind=3&s=0&p=0');}"  class="btn btn-default">保健养生</a></li>
+									<li class="text-danger"> <a id="a4" type="button" href="{:U('Index/listgoods?kind=4&s=0&p=0');}"  class="btn btn-default">其它</a></li> 
+								</ul>
+								<ul class="list-inline">
+									<li class="text-danger"><strong>宝贝来源：</strong></li>
+									<li class="text-danger"> 天猫/淘宝</li>
+								</ul>
+								<hr>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+											<label><span class="glyphicon glyphicon-th" ><strong>全部货物s </strong>排序方式（默认按时间）</span> </label>
+								      <div class="btn-group" id = "btlist">
+									      <a id="s0"type="button" href="{:U('Index/listgoods?p=0&s=0&kind='.$kind.'');}" class="btn btn-default"><strong>按时间TIME</strong></a>
+											  <a id="s1" type="button" href="{:U('Index/listgoods?p=0&s=1&kind='.$kind.'');}" class="btn btn-default"><strong>按好评REMARK</strong></a>
+											  <a id="s2" type="button" href="{:U('Index/listgoods?p=0&s=2&kind='.$kind.'');}" class="btn btn-default"><strong>按浏览量SCAN</strong></a>
+										  </div>
+									</div>
+								</div>
+								<ul class="media-list">
+				         	<foreach name="listtop" item="vo">
+	                  <li class="media">
+	                  	<?php $str = $vo['INFO_IMG']; $str = explode("http",$str);?>
+	                      <a class="pull-left" href=""><img style="height:150px;width: 150px;" src="http{$str[1]}"></a>
+	                      <a href="{:U('Index/showGood?id='.$vo['id'].'');}">
+		                      <div class="media-body">
+		                          <h4 class="text-danger"><strong>[置顶推荐]{$vo.TITLE}</strong></h4>
+		                          <p style="font-size: 14px;"><?php echo mb_substr($vo['INFO_TXT'],0,120,"utf-8"); ?> 
+		                          	...
+		                          	<a class="btn btn-link" target= _blank href="{:U('Index/showGood?id='.$vo['id'].'');}" ><strong>详细信息&nbsp&nbsp</strong></a><small><?php echo date('Y/m/d',$vo['TIME']); ?></small>	
+		                          </p> 
+		                          <ul class="list-inline">
+		                          	<li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+															  <li class = "up">
+															  	<a id="{$vo['id']}" >
+													          <span class="glyphicon glyphicon-thumbs-up"></span>
+													        </a>
+													        <label id="l{$vo['id']}"> {$vo['DING']} </label>
+															  </li>
+															  <li></li>
+															  <li class = "low">
+															  	<a id="{$vo['id']}">
+													          <span class="glyphicon glyphicon-thumbs-down"></span>
+													        </a>
+													        <label id="ll{$vo['id']}"> {$vo['LOW']} </label>
+															  </li>
+															  <span style="float:right"><a href="{$vo['GOOD_SRC']}" target= _blank type="button" class="btn btn-danger">去购买</a></p>
+															</ul>
+															
+		                      </div>
+	                      </a>
+	                      
+	                  </li>
+	                  <hr style="border:1px solid red">  
+	                </foreach>
+	              </ul>
+								<ul class="media-list">
+				         	<foreach name="list" item="vo">
+	                  <li class="media">
+	                  	<?php $str = $vo['INFO_IMG']; $str = explode("http",$str);?>
+	                      <a class="pull-left" href=""><img style="height:150px;width: 150px;" src="http{$str[1]}" height="64" width="64"></a>
+	                      <a target= _blank href="{:U('Index/showGood?id='.$vo['id'].'');}">
+		                      <div class="media-body">
+		                          <h4 class="text-danger"><strong>{$vo.TITLE}</strong></h4>
+		                          <p style="font-size: 14px;"><?php echo mb_substr($vo['INFO_TXT'],0,120,"utf-8"); ?> 
+		                          	...
+		                          	<a class="btn btn-link" target= _blank href="{:U('Index/showGood?id='.$vo['id'].'');}" ><strong>详细信息&nbsp&nbsp</strong></a><small><?php echo date('Y/m/d',$vo['TIME']); ?></small>	
+		                          </p> 
+		                          <ul class="list-inline">
+		                          	<li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+															  <li class = "up">
+															  	<a id="{$vo['id']}" >
+													          <span class="glyphicon glyphicon-thumbs-up"></span>
+													        </a>
+													        <label id="l{$vo['id']}"> {$vo['DING']} </label>
+															  </li>
+															  <li></li>
+															  <li class = "low">
+															  	<a id="{$vo['id']}">
+													          <span class="glyphicon glyphicon-thumbs-down"></span>
+													        </a>
+													        <label id="ll{$vo['id']}"> {$vo['LOW']} </label>
+															  </li>
+															  <span style="float:right"><a href="{$vo['GOOD_SRC']}" target= _blank type="button" class="btn btn-danger">去购买</a></p>
+															</ul>  
+		                      </div>
+	                      </a>
+	                      
+	                  </li>
+	                  <hr>
+	                </foreach>
+	              </ul>
+	              <span><div class="page">{$page}</div></span>
+							</div>
+		        	<div class="col-md-3">
+		        			<include file="./Application/Shopping/View/public/right1.html" />
+									<include file="./Application/Shopping/View/public/right0.html" />
+		        	</div>
+		        </div>
+		      </div>
+		      <include file="./Application/Shopping/View/public/bottom.html" />
+					<!-- 回到顶部 -->
+					<include file="./Application/Shopping/View/public/re_top.html" />
+			    <!-- 回到顶部 -->	
+      </div>
+
+	  <script>
+  	$(document).ready(function(){
+		  //var upup_name = "upup{$vo['id']}";
+		  //var d_c_name = ".d_c{$vo['id']}" ;
+		  //alert(upup_name);
+		  /**TOP a CONTROL**/
+			var kind = {$kind};
+			$("#a"+kind).removeClass('btn-default').addClass('btn-danger');
+		  /**TOP a CONTROL END**/
+		  /**TOP sort CONTROL**/
+			var s = {$s};
+			$("#s"+s).removeClass('btn-default').addClass('btn-danger');
+		  /**TOP sort CONTROL END**/
+		  $("li.up").click(function() 
+		  {  
+		  	//var aobj = $(this).children("span");
+		  	//alert($(aobj[0]).attr("class"));
+		  	var link_id = $(this).children("a").attr('id');
+				var url = '__URL__/update_u_d?v=0&id='+link_id;  
+				$.ajax({  
+					type: "get",  
+					url: url,  
+					dataType: "json",  
+					timeout: 1000,//超时时间 
+					success: function(msg)
+					{  
+						//window.location.reload();
+						//$(this).children("label").text(msg);
+						//alert(link_id);
+						if(msg == -1)
+						{
+							alert("亲，休息一下吧，推的太快啦！")
+						}else{
+							$("label#l"+link_id).text(msg);
+						}
+						//alert(msg);
+					}  
+				});  
+			}); 
+			$("li.low").click(function() 
+		  {  
+		  	//var aobj = $(this).children("span");
+		  	//alert($(aobj[0]).attr("class"));
+		  	var link_id = $(this).children("a").attr('id');
+				var url = '__URL__/update_u_d?v=1&id='+link_id;  
+				$.ajax({  
+					type: "get",  
+					url: url,  
+					dataType: "json",  
+					timeout: 1000,//超时时间 
+					success: function(msg)
+					{  
+						//window.location.reload();
+						//$(this).children("label").text(msg);
+						//alert(link_id);
+						if(msg == -1)
+						{
+							alert("亲，休息一下吧，推的太快啦！")
+						}else{
+							$("label#ll"+link_id).text(msg);
+						}
+						//alert(msg);
+					}  
+				});  
+			});
+				  
+		}); 
+  	</script>      
+  </body>
+</html>

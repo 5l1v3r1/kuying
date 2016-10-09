@@ -1,0 +1,88 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/update" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this,dialogAjaxDone);">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$adinf.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+                <label>商品分类名称：</label>
+                <select name="cat_id" style="width:198px;">
+                    <option value="0" <if condition="$adinf['cat_id'] eq 0">selected</if>>无</option>
+                    <volist name="categorylist" id="vocategory">
+                        <option value="{$vocategory.id}" <if condition="$vocategory.id eq $adinf['cat_id']">selected</if>>{$vocategory.cat_name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>楼层分类名称：</label>
+                <select name="floor_id" style="width:198px;">
+                    <option value="0" <if condition="$adinf['floor_id'] eq 0">selected</if>>无</option>
+                    <volist name="floorlist" id="vofloor">
+                        <option value="{$vofloor.id}" <if condition="$vofloor.id eq $adinf['floor_id']">selected</if>>{$vofloor.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>广告名称：</label>
+                <input type="text" name="ad_name" class="required" size="33" value="{$adinf.ad_name}" />
+            </div>
+            <div class="unit">
+            	<label>扩展名称：</label>
+                <input type="text" name="ad_ext" class="" size="33" value="{$adinf.ad_ext}" />
+            </div>
+            <div class="unit">
+            	<label>广告类型：</label>
+                <select name="ad_type" style="width:198px;">
+                	<option value="1" <if condition="$adinf['ad_type'] eq 1">selected</if>>文字</option>
+                	<option value="2" <if condition="$adinf['ad_type'] eq 2">selected</if>>图片</option>
+                    <option value="3" <if condition="$adinf['ad_type'] eq 3">selected</if>>Flash</option>
+                </select>
+            </div>
+            <if condition="$adinf['ad_img'] neq ''">
+                <div class="unit">
+                    <label>广告图片：</label>
+                    <img src="__UPLOAD__{$adinf.ad_img}" style="width:50px; height:50px;" />
+                </div>
+                <div class="unit">
+                    <label>重新上传：</label>
+                    <input type="file" name="ad_img" value="" />
+                </div>
+            </if>
+            <div class="unit">
+                <label>广告位置：</label>
+                <select name="ad_position" style="width:198px;">
+                    <option value="1" <if condition="$adinf['ad_position'] eq 1">selected</if>>首页分类导航</option>
+                    <option value="2" <if condition="$adinf['ad_position'] eq 2">selected</if>>首页幻灯片</option>
+                    <option value="3" <if condition="$adinf['ad_position'] eq 3">selected</if>>滚动幻灯片</option>
+                    <option value="4" <if condition="$adinf['ad_position'] eq 4">selected</if>>首页右侧随机广告</option>
+                    <option value="5" <if condition="$adinf['ad_position'] eq 5">selected</if>>楼层左侧</option>
+                    <option value="6" <if condition="$adinf['ad_position'] eq 6">selected</if>>楼层中上</option>
+                    <option value="7" <if condition="$adinf['ad_position'] eq 7">selected</if>>楼层中下</option>
+                    <option value="8" <if condition="$adinf['ad_position'] eq 8">selected</if>>楼层右侧</option>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>广告链接：</label>
+                <input type="text" name="ad_link" class="" size="33" value="{$adinf.ad_link}" />
+            </div>
+            <div class="unit">
+            	<label>是否显示：</label>
+                <select name="ad_show" style="width:198px;">
+                	<option value="1" <if condition="$adinf['ad_show'] eq 1">selected</if>>是</option>
+                	<option value="0" <if condition="$adinf['ad_show'] eq 0">selected</if>>否</option>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>排序：</label>
+                <input type="text" name="ad_sort" class="required" size="33" value="{$adinf.ad_sort}" />
+            </div>
+        </div>
+        
+        <div class="formBar">
+        	<ul>
+            	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

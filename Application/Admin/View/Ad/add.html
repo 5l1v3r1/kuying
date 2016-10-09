@@ -1,0 +1,81 @@
+<div class="pageContent">
+	<form method="post" action="__CONTROLLER__/insert" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this,dialogAjaxDone);">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+                <label>商品分类名称：</label>
+                <select name="cat_id" style="width:198px;">
+                    <option value="0">无</option>
+                    <volist name="categorylist" id="vocategory">
+                        <option value="{$vocategory.id}">{$vocategory.cat_name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>楼层分类名称：</label>
+                <select name="floor_id" style="width:198px;">
+                    <option value="0">无</option>
+                    <volist name="floorlist" id="vofloor">
+                        <option value="{$vofloor.id}">{$vofloor.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>广告名称：</label>
+                <input type="text" name="ad_name" class="required" size="33" value="" />
+            </div>
+            <div class="unit">
+            	<label>扩展名称：</label>
+                <input type="text" name="ad_ext" class="" size="33" value="" />
+            </div>
+            <div class="unit">
+            	<label>广告类型：</label>
+                <select name="ad_type" style="width:198px;">
+                	<option value="1">文字</option>
+                	<option value="2">图片</option>
+                    <option value="3">Flash</option>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>图片：</label>
+                <input type="file" name="ad_img" value="" />
+            </div>
+            <div class="unit">
+                <label>广告位置：</label>
+                <select name="ad_position" style="width:198px;">
+                    <option value="1">首页分类导航</option>
+                    <option value="2">首页幻灯片</option>
+                    <option value="3">滚动幻灯片</option>
+                    <option value="4">首页右侧随机广告</option>
+                    <option value="5">楼层左侧</option>
+                    <option value="6">楼层中上</option>
+                    <option value="7">楼层中下</option>
+                    <option value="8">楼层右侧</option>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>广告链接：</label>
+                <input type="text" name="ad_link" class="" size="33" value="" />
+            </div>
+            <div class="unit">
+            	<label>是否显示：</label>
+                <select name="ad_show" style="width:198px;">
+                	<option value="1">是</option>
+                	<option value="0">否</option>
+                </select>
+            </div>
+            <div class="unit">
+            	<label>排序：</label>
+                <input type="text" name="ad_sort" class="required" size="33" value="" />
+            </div>
+        </div>
+        
+        <div class="formBar">
+        	<ul>
+            	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

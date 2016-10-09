@@ -1,0 +1,117 @@
+<?php
+namespace Admin\Controller;
+use Org\Util;
+
+use Think\Controller;
+use Org\Util\Auth;
+class UserController extends CommonController
+{
+	//编辑
+	public function edit()
+	{
+		$user = M('userinfo');
+		$userinf = $user->find(I('id'));		
+		$this->vo = $userinf;
+		$this->display();
+	}
+	
+	//更新
+	public function update()
+	{
+		$user = M('userinfo');
+		$where['id'] = I('id');
+		$where['USERNAME']=I('username','','htmlspecialchars');
+		$where['EMAIL'] = I('email','','htmlspecialchars');
+		$where['PASSWORD'] = I('password','','htmlspecialchars');
+		$where['REG_FLAG'] = I('status','','htmlspecialchars');
+		$where['USER_GROUP'] = I('group','','htmlspecialchars');
+		$where['USER_SCORE'] = I('score','','htmlspecialchars');
+		if(!$user->create($where))
+		{
+			$this->error($user->getError());
+		}
+		else 
+		{
+			$user->save();
+			//删除用户组明细表中某会员所有记录
+			$this->success('编辑成功！');
+		}
+	}
+	
+	//添加用户
+	public function insert()
+	{
+		$user=M('userinfo');
+		$where['USERNAME']=I('username');
+		if($user->where($where)->count())
+		{
+			$this->error('用户名已存在!');
+		}
+		else 
+		{
+			$where['EMAIL'] = I('email','','htmlspecialchars');
+			$where['PASSWORD'] = I('password','','htmlspecialchars');
+			$where['REGTIME'] = time();
+			$where['REG_FLAG'] = I('status','','htmlspecialchars');
+			$where['USER_GROUP'] = I('group','','htmlspecialchars');
+			$where['USER_SCORE'] = I('score','','htmlspecialchars');
+			if($user->create($where))
+			{
+				$newuserid=$user->add();
+				if($newuserid)
+				{				
+					$this->success('用户添加成功！');
+				}
+				else 
+				{
+					$this->error('用户添加失败！');
+				}
+			}
+			else 
+			{
+				//创建数据对象失败
+				$this->error($user->getError());
+			}
+		}
+	}
+	
+	public function password()
+	{
+		$this->display();
+	}
+	
+	public function editpwd()
+	{
+		$data['id']=I('id','','htmlspecialchars');
+		$data['password']=I('password','','htmlspecialchars');
+		$user=M('User');
+		
+		if($user->save($data))
+		{
+			$this->success('密码修改成功！');
+		}
+		else 
+		{
+			$this->error('密码修改失败！');
+		}
+	}
+	
+	public function showinfo()
+	{
+		$id=I('id');
+		$user=M('userinfo');
+		$this->userinfo=$user->where('id='.$id)->find();
+		
+		$this->display();
+	}
+	
+	public function searchGroup()
+	{
+		$authgroup=M('AuthGroup');
+		$this->grouplist=$authgroup->select();
+		
+		$this->display();
+	}
+}
+
+?>

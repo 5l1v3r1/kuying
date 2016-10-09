@@ -1,0 +1,243 @@
+[ 2015-01-17T23:10:27+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.005000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 47 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 47 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 51 行.
+NOTIC: [8192] Function eregi() is deprecated C:\wamp\www\kuying\Application\Admin\Controller\IndexController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `kuying_user` [ RunTime:0.004000s ]
+ERR: 1146:La table 'kuying_db.kuying_user' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `kuying_user`
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: infonum C:\wamp\www\kuying\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-01-17T23:10:31+08:00 ] 127.0.0.1 /kuying/index.php/Admin/hdzy/index?_=1421507430951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_hdzy` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\HdzyController.class.php 第 45 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_hdzy` LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: currentPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 14 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 15 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 23 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 24 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 25 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 26 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 27 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 28 行.
+NOTIC: [8] Undefined index: keyword C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 33 行.
+NOTIC: [8] Undefined variable: list C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 84 行.
+NOTIC: [8] Undefined variable: totalCount C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 105 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 108 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 109 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 110 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 111 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 112 行.
+NOTIC: [8] Undefined variable: totalCount C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 116 行.
+NOTIC: [8] Undefined variable: numPerPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 116 行.
+NOTIC: [8] Undefined variable: currentPage C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T23:10:32+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Hdzy/add/navTabId/hdzy_index?_=1421507432267
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.003000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 5 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 9 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 13 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 17 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 21 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 25 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 29 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 33 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 37 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\5ca3140bc95cd192b142a0be37172a1f.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-17T23:10:43+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Hdzy/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.004000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004001s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_hdzy` [ RunTime:0.004000s ]
+SQL: INSERT INTO `kuying_hdzy` (`FID`,`UPTIME`,`FNAME`,`SORT`,`TYPE`,`SCORE`,`LINK`,`DOWN_NO`,`SCAN_NUM`,`ALDOWN`,`MES_SHOW_DIV`,`ORTOP`) VALUES (1421507443,1421507443,'1',1,1,1,'1',1,1,'1','111',1) [ RunTime:0.003000s ]
+
+[ 2015-01-17T23:10:45+08:00 ] 127.0.0.1 /kuying/index.php/Admin/hdzy/index?_=1421507445522
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_hdzy` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\HdzyController.class.php 第 45 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_hdzy` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\HdzyController.class.php 第 55 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_hdzy` ORDER BY UPTIME desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 23 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 24 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 25 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 26 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 27 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 28 行.
+NOTIC: [8] Undefined index: keyword C:\wamp\www\kuying\Application\Runtime\Cache\Admin\958ec49242d70a4fcef50efa5d49ab2d.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T23:13:19+08:00 ] 127.0.0.1 /kuying/index.php/Admin/hdju/index?_=1421507599484
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.003000s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_hdju` [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\HdjuController.class.php 第 45 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kuying_hdju` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\kuying\Application\Admin\Controller\HdjuController.class.php 第 55 行.
+NOTIC: [8] Undefined index: limit C:\wamp\www\kuying\ThinkPHP\Library\Think\Db.class.php 第 788 行.
+SQL: SELECT * FROM `kuying_hdju` ORDER BY UPTIME desc LIMIT 0,20   [ RunTime:0.010001s ]
+NOTIC: [2] Division by zero C:\wamp\www\kuying\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 23 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 24 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 25 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 26 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 27 行.
+NOTIC: [8] Undefined index: keytype C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 28 行.
+NOTIC: [8] Undefined index: keyword C:\wamp\www\kuying\Application\Runtime\Cache\Admin\e94f49e927a4cec18ee090dc879955d8.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T23:13:21+08:00 ] 127.0.0.1 /kuying/index.php/Admin/Hdju/add/navTabId/hdju_index?_=1421507601194
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\wamp\www\kuying\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `kuying_auth_group_access` [ RunTime:0.005001s ]
+SQL: SELECT `rules` FROM kuying_auth_group_access a INNER JOIN kuying_auth_group g on a.group_id=g.id  WHERE ( a.uid='11' and g.status='1' )  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuying_auth_rule` [ RunTime:0.004000s ]
+SQL: SELECT `condition`,`name` FROM `kuying_auth_rule` WHERE `id` IN ('26','25','24','15','16','17','8','9','3','10','1','2','4','11','12','13') AND `type` = 1 AND `status` = 1  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 5 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 9 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 13 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 17 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 21 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 25 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 29 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 33 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 37 行.
+NOTIC: [8] Undefined variable: vo C:\wamp\www\kuying\Application\Runtime\Cache\Admin\3827235a2eda58c1c9313d2b405326a5.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

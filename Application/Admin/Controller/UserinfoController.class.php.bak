@@ -1,0 +1,144 @@
+<?php
+namespace Admin\Controller;
+use Org\Util;
+
+use Think\Controller;
+use Org\Util\Auth;
+class UserinfoController extends CommonController
+{
+	//编辑
+	public function edit()
+	{
+		$user = M('userinfo');
+		$userinf = $user->find(I('id'));
+		
+		$auth = new Auth();
+		$list = $auth->getGroups(I('id'));
+		foreach ($list as $value)
+		{
+			$group_id[] = $value['group_id'];
+			$group_name[] = $value['title'];
+		}
+		$userinf['group_id'] = implode(',',$group_id);
+		$userinf['group_name'] = implode(',',$group_name);
+		
+		$this->vo = $userinf;
+		$this->display();
+	}
+	
+	//更新
+	public function update()
+	{
+		$user = M('userinfo');
+		if(!$user->create())
+		{
+			$this->error($user->getError());
+		}
+		else 
+		{
+			$user->save();
+			//删除用户组明细表中某会员所有记录
+			$access=M('AuthGroupAccess');
+			$access->where('uid='.I('id'))->delete();
+			
+			//添加当前会员用户组明细表
+			$groupid=explode(',',I('group_groupId'));
+			$data=array();//组建二维数组
+			foreach ($groupid as $value)
+			{
+				$data[]=array(
+					'uid' => I('id'),  //结果例如：115
+					'group_id' => $value, //结果例如：    1
+				);
+			}
+			$access->addAll($data);
+			
+			$this->success('编辑成功！');
+		}
+	}
+	
+	//添加用户
+	public function insert()
+	{
+		$user=M('userinfo');
+		$where['username']=I('username');
+		if($user->where($where)->count())
+		{
+			$this->error('用户名已存在!');
+		}
+		else 
+		{
+			$_POST['password']=md5(I('password'));
+			if($user->create())
+			{
+				$newuserid=$user->add();
+				if($newuserid)
+				{
+					$access=M('AuthGroupAccess');
+					$groupid=explode(',',I('group_groupId'));
+					
+					$data=array();//组建二维数组
+					foreach ($groupid as $value)
+					{
+						$data[]=array(
+							'uid' => $newuserid,  //结果例如：115
+							'group_id' => $value, //结果例如：    1
+						);
+					}
+					$access->addAll($data);
+					
+					$this->success('用户添加成功！');
+				}
+				else 
+				{
+					$this->error('用户添加失败！');
+				}
+			}
+			else 
+			{
+				//创建数据对象失败
+				$this->error($user->getError());
+			}
+		}
+	}
+	
+	public function password()
+	{
+		$this->display();
+	}
+	
+	public function editpwd()
+	{
+		$data['id']=I('id');
+		$data['password']=md5(I('password'));
+		$user=M('User');
+		
+		if($user->save($data))
+		{
+			$this->success('密码修改成功！');
+		}
+		else 
+		{
+			$this->error('密码修改失败！');
+		}
+	}
+	
+	public function showinfo()
+	{
+		$id=I('id');
+		$user=M('userinfo');
+		$this->userinfo=$user->where('id='.$id)->find();
+		
+		$this->display();
+	}
+	
+	public function searchGroup()
+	{
+		$authgroup=M('AuthGroup');
+		$this->grouplist=$authgroup->select();
+		
+		$this->display();
+	}
+}
+
+?>

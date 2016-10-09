@@ -1,0 +1,40 @@
+<!--查询条件-->
+<div class="pageHeader">
+</div>
+
+<div class="pageContent">
+    <!--操作按钮-->
+    <div class="panelBar">
+    	<ul class="toolBar">
+        	<li><a class="add" href="__URL__/add/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" rel="lunbo_add" mask="true" maxable="false" width="800" height="550"><span>新增</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" posttype="string" rel="id" target="selectedTodo" title="确定要删除选中的记录吗？" warn="请至少选择一位用户"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_user}" target="dialog" mask="true" warn="请选择一条记录" width="800" height="550" rel="lunbo_edit"><span>编辑</span></a></li>
+            <li class="line"></li>
+            <li><a class="edit" href="__URL__/uploadimg/id/{sid_user}" target="dialog" mask="true" warn="请选择一条记录" width="650" height="450" rel="lunbo_uploadimg"><span>图片上传</span></a></li>
+        </ul>
+    </div>
+    <!--操作按钮结束-->
+
+    <!--数据显示-->
+    <table class="list" width="100%" layoutH="115">
+    	<thead>
+        	<tr>
+            	<th width="10%"><input type="checkbox" group="id" class="checkboxCtrl" /></th>
+                <th width="20%">商品id</th>
+                <th width="20%">区域（goodlist:1， 9.9: 2）</th>
+                <th width="20%">TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<volist id="vo" name="list">
+                <tr target="sid_user" rel="{$vo['id']}" ondblclick="$.getInfo({$vo['id']})">
+                    <td>{$vo['GOOD_ID']}</td>
+                    <td>{$vo['ZONE']}</td>
+                    <td>{$vo['TIME']}</td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <!--数据显示结束-->
+
+</div>

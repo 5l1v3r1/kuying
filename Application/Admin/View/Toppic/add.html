@@ -1,0 +1,36 @@
+<style type="text/css">
+.pageFormContent span { padding-left:0;}
+</style>
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$Think.request.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+            	<label>MODEL：</label>
+								<select name="MODEL">
+              		<option value="Index/showHDcontent">高清电影区</option>
+									<option value="Index/showZYcontent">高清综艺区</option>
+									<option value="Index/showBDcontent">小容量电影区</option>
+									<option value="Index/showJucontent">高清电视剧</option>
+								</select>	
+          </div>
+        	<div class="unit">
+            	<label>FID：</label>
+              <input type="text" name="FID" class="required number" size="50" maxlength="30" value="" />
+          </div>
+          <div class="unit">
+            	<label>FNAME：</label>
+              <input type="text" name="FNAME" class="required textInput" size="50" maxlength="200" value="" />
+          </div>
+      </div>   
+      <div class="formBar">
+      	<ul>
+          	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+              <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+          </ul>
+      </div>
+  </form>
+</div>

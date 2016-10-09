@@ -1,0 +1,46 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/update" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    	<input type="hidden" name="callbackType" value="closeCurrent" />
+        <input type="hidden" name="navTabId" value="{$Think.request.navTabId}" />
+        <input type="hidden" name="id" value="{$Think.request.id}" />
+    	<div class="pageFormContent" layoutH="58">
+        	<div class="unit">
+            	<label>用户名：</label>
+              <input type="text" name="username" class="required alphanumericchinese" size="33" maxlength="20" value="{$vo.USERNAME}" />
+          </div>
+					<div class="unit">
+							<label>邮　箱：</label>
+							<input type="text" name="email" class="required email" size="33" maxlength="50" value="{$vo.EMAIL}" />
+					</div>
+            <div class="unit">
+            	<label>密　码：</label>
+                <input type="text" name="password" class="required alphanumeric" size="33" maxlength="16" value="{$vo.PASSWORD}" />
+            </div>
+        	<div class="unit">
+            	<label>用户组：</label>
+								<select name="group">
+              		<option value="0">普通用户组0</option>
+									<option value="9">管理员</option>
+								</select>	
+          </div>
+					<div class="unit">
+            	<label>积 分：</label>
+              <input type="text" name="score" class="required alphanumericchinese" size="33" maxlength="20" value="{$vo.USER_SCORE}" />
+          </div>
+          <div class="unit">
+          		<label>注册状态：</label>
+              <select name="status">
+              	<option value="1">已验证</option>
+                <option value="0">未验证</option>
+              </select>
+          </div>
+        </div>
+        
+        <div class="formBar">
+        	<ul>
+            	<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>

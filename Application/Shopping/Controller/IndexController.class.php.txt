@@ -1,0 +1,139 @@
+<?php
+namespace Shopping\Controller;
+use Think\Controller;
+class IndexController extends Controller {
+    /**
+		** 首页显示
+		**/		
+    public function index(){
+        //$this->show();
+                //$this->show();
+        $Model = M("goods"); 
+        $map['OR_INDEX'] = 1;
+        $list = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SRC,DING,LOW,TIME')->where($map)->order('TIME asc')->select();
+        $map['OR_TOP'] = 1;
+        $list1 = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SRC,DING,LOW,TIME')->where($map)->order('TIME asc')->select();
+        $this->assign('list',$list);
+        $this->assign('list1',$list1);
+        $this->display(T('Index/index'));
+    }
+    public function update_u_d()
+    {
+    	$ip = cookie('R_IP');
+    	if(empty($ip)){
+    		$flag = I('v','','htmlspecialchars');
+	    	$id = I('id','','htmlspecialchars');
+	    	$Model = M("goods"); 
+	    	$map['id'] = $id;
+	    	if($flag == 0){ //up
+	    		$list = $Model->field('DING')->where($map)->find();
+	    		$scan['DING'] = $list['DING']+1;
+	    		$Model->where($map)->save($scan);	
+	    		$ajax_back[0] =$scan['DING'];	
+	    	}else{ //down
+	    		$list = $Model->field('LOW')->where($map)->find();
+	    		$scan['LOW'] = $list['LOW']+1;
+	    		$Model->where($map)->save($scan);	
+	    		$ajax_back[0] =$scan['LOW'];
+	    	}
+	    	$ip = get_client_ip();
+  			cookie('R_IP',$ip,5);
+	    	
+    	}else{
+    		$ip = get_client_ip();
+  			cookie('R_IP',$ip,5);
+    		$ajax_back[0] =-1;	
+    	}
+    	$this->ajaxReturn($ajax_back,'JSON'); //跳转回原页面的方法
+    }
+    public function showGood()
+   	{
+   		$id = I('id','','htmlspecialchars');
+   		$Model = M("goods");
+   		$map['id'] = $id;
+   		$list = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SORT,GOOD_SRC,DING,LOW,SCAN_NUM,TIME')->where($map)->find();
+   		switch($list['GOOD_SORT'])
+   		{
+   			case 0:
+   				$list['GOOD_SORT'] = "运动休闲";
+   				break;
+   			case 1:
+   				$list['GOOD_SORT'] = "数码电脑";
+   				break;
+   			case 2:
+   				$list['GOOD_SORT'] = "创意生活";
+   				break;
+   			case 3:
+   				$list['GOOD_SORT'] = "养生保健";
+   				break;
+   			default:
+   				$list['GOOD_SORT'] = "其它宝贝";
+   		}
+   		//添加浏览量的代码！！！！！！
+   		$this->assign('list',$list);
+   		$this->display(T('Index/good'));
+   		//echo($id);
+   		
+   	}
+   	public function listgoods()
+   	{
+   		$kind = I('kind','','htmlspecialchars');
+   		$s = I('s','','htmlspecialchars');
+   		$Model = M("goods"); 
+
+   		/**
+   		**置顶信息显示
+   		**/
+			if($_GET['p']==0)
+    	{
+    		$top['OR_TOP'] = 1;
+    		$list1 = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SRC,DING,LOW,TIME')->where($top)->order('TIME desc')->select();
+    		$this->assign('listtop',$list1);
+    	}
+    	/*
+    	*排序规则 0 time 1 remark 2 scan
+   		*/
+   		switch($s)
+   		{
+   			case 1:
+   				$ord_list = 'DING desc';
+   				break;
+   			case 2:
+   				$ord_list = 'SCAN_NUM desc';
+   				break;
+   			default:
+   				$ord_list = 'TIME desc';
+   		}
+    	/**
+   		**分类信息显示
+   		**/
+    	if($kind !=-1){
+    		$map['GOOD_SORT'] = $kind;
+    		$list = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SRC,DING,LOW,TIME')->where($map)->order($ord_list)->page($_GET['p'].',25')->select();
+				$count = $Model->where($map)->count();// 查询满足要求的总记录数    	
+    	}else
+    	{
+    		$list = $Model->field('id,TITLE,INFO_TXT,INFO_IMG,GOOD_SRC,DING,LOW,TIME')->order($ord_list)->page($_GET['p'].',25')->select();
+    		$count = $Model->count();// 查询满足要求的总记录数
+    	}
+    	$Page = new \Think\Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数
+    	$Page->setConfig('prev','上一页');
+      $Page->setConfig('next','下一页');
+      $Page->setConfig('first','第一页');
+      $Page->setConfig('last','尾页');
+      $Page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER% ');
+    	$show = $Page->show();// 分页显示输出
+    	$this->assign('page',$show);// 赋值分页输出
+	    $this->assign('list1',$list1);
+	    $this->assign('kind',$kind);
+	    $this->assign('list',$list);
+	    $this->assign('s',$s);
+   		$this->display(T('Index/goodlist'));
+   	}
+   	public function loginjump()
+   	{
+   		echo("1！");
+   		//$M = A('Home/Login');
+   		//$this->display($M->loginpage);
+   	}
+}

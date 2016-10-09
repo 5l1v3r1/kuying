@@ -1,0 +1,31 @@
+<div class="col-md-2" style="padding:0px;margin-right:0px;margin-top:0px;margin-bottom:0px;" >
+	<div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 ><strong>创意工坊热销宝贝</strong></h4>
+			</div>
+			<br>
+			<ul class="media-list">
+	     	<foreach name="list_ri" item="vo">
+	        <li id="look" class="media">
+	        	<?php $str = $vo['INFO_IMG']; $str = explode("http",$str);?>
+	            <a target= _blank href="http://www.kyhd.net/index.php/shopping/index/showgood?id={$vo['id']}" class="pull-left" href=""><img style="height:60px;width: 60px;" src="http{$str[1]}"></a>
+	            <a target= _blank href="http://www.kyhd.net/index.php/shopping/index/showgood?id={$vo['id']}">
+	              <div class="media-body">
+	                  <h6 class="text-danger"><strong>{$vo.TITLE}</strong></h6>
+	              </div>
+	            </a>
+	            
+	            <script>
+	        			/*$(document).ready(function(){
+	        				
+								  $("li.1_1_a_c").click(function(){
+								  alert("hahah");
+								  });
+								});*/
+	        		</script>
+	        </li>
+	        <hr style="margin-top:10px">
+	      </foreach>
+	    </ul>
+	</div>
+</div>

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb" lang="zh-CN"> 
+  <head>
+    <title>酷影网www.kyhd.net</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高清,1080p,720p,蓝光，爱微淘">
+    <meta name="author" content="酷影网">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/bootstrap/css/cas_style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="__PUBLIC__/bootstrap/js/check.js"></script>
+  </head>
+  <style>
+  	hr
+  	{
+  		margin-top: -4px;
+  		margin-bottom:0px;
+  	}
+  	p
+  	{
+  		
+			line-height: 24px;
+			color: #2b2b2b;
+			padding: 10px 10px 10px 10px;
+			word-wrap: break-word;
+  	}
+  	.jumbotron p {
+			font-size: 17px;
+		}
+  	
+  </style>
+  <body style=" FONT-FAMILY: 微软雅黑">
+    <!--NAV-->
+    <include file="./Application/Home/View/public/header.html" />
+		<!--NAV END-->
+    <div class="jumbotron visible-lg visible-md visible-sm visible-xs" style="margin-top:0px;margin-bottom:0px;padding:0px;background-color:white;" >
+    	<div class="container" style="padding:0px;margin-top:0px;margin-bottom:0px;">
+    		<!--导航-->
+      	<h6>
+      		<a href="{:U('Index/showindex');}"><img src="__PUBLIC__/img/icon/index.gif" width=16px > 首 页/</a>
+      		<a href="{:U('Index/showBTZone');}">BT共享区/</a>
+      		<a href="{:U('Index/showBDList?type='.$listpa.'&p=1');}">{$list['SORT']}分享专区/</a>
+      		<a href="#">ResourceShow</a>
+      	</h6>
+      	<hr>
+      	<h4 color="#fafafa">
+      		 <img src="__PUBLIC__/img/icon/filmname.gif">
+      		<small>{$list['TYPE']}</small>{$list['FNAME']}
+      		</h4>
+      	<hr>
+      	<h5 class="text-left" >
+      		<a href="#asd"><img src="__PUBLIC__/img/icon/downadd.gif">下载地址</a><small> 管理员因为工作疏漏可能误传色情/反动/侵权等资源,请及时向网站反馈,一经采纳,奖励至少5个积分,站长邮箱:net33ph@hotmail.com</small>
+      	</h5>
+    		<!--left-->
+      	<!--left-->
+      	<div class="col-md-9" style="padding-left:5px;margin-left:0px;" >	
+      		<!--BT TOP -->
+	        <div class="row" style="padding:0px;margin-left:0px;margin-right:0px;">
+	        	<div class="row" style="padding:8px;margin-left:0px;background-color:#fafafa;">	        	
+		          <div class="thumbnail" style="margin-bottom:10px"  >
+		        		{$list['MES_SHOW_DIV']}
+								<if condition="($_SESSION['u_UID'] eq '') OR ($_SESSION['u_UID'] eq null) "> 
+		        			<div id="nonelog" class="alert alert-danger alert-dismissable">
+			        			<center>
+			        				<strong>有帐号吗？抓紧<a href="{:U('Login/loginpage');}" >登录</a>！没有帐号，还不抓紧<a href="{:U('Login/register');}" >注册一个</a>
+			        				</strong>
+			        			</center>
+		        			</div>
+		        		<elseif condition="($aldown neq 1) AND (($_SESSION['u_score']-$list['SCORE']) lt 0 )"/>
+		        			<div id="scoreshort" class="alert alert-danger alert-dismissable"> 
+			        			对不起，您的积分不够
+			        			<a data-toggle="modal" data-target="#myModal">积分不够，看这里！</a>
+			        		</div>
+		        		</if>
+								<div id="b"><img src="__PUBLIC__/img/icon/downcount.gif" /> 浏览量：{$list['SCAN_NUM']}次</div>
+								<div>
+									<img src="__PUBLIC__/img/icon/score.gif" />下载需要{$list['SCORE']}个积分
+									<br>
+									------------
+									<strong><img src="__PUBLIC__/img/icon/warmnotice.gif"> <font size="3px">如何获取积分</font></strong>
+									------------<br>
+									<ul class="list-unstyled text-danger">
+								  		 <li>&nbsp&nbsp1·注册即送30个积分</li>
+										 <li>&nbsp&nbsp2·每天首页签到随机送积分</li>
+								 		 <li>&nbsp&nbsp3·每天首页参与积分抽奖活动</li>
+									</ul>
+								</div>
+								<div id ="asd" >--------------------------</div>
+	       			</div>
+				<include file="./Application/Home/View/hdbd/hdfileshow/remark.html" />
+	       		</div>
+      	</div>
+      	</div>	
+      <!--right-->
+      	<include file="./Application/Home/View/public/hdbd/showlistright.html" />
+			</div>	
+      <!--right END-->	
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","qzone","tsina","renren","tieba","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina","renren","tieba","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>   
+      <br>  
+    </div>
+    <include file="./Application/Home/View/public/bottom.html" />
+		<!-- 回到顶部 -->
+		<include file="./Application/Home/View/public/re_top.html" />
+    <!-- 回到顶部 -->
+    <!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		      <div class="modal-content">
+		         <div class="modal-header">
+		            <button type="button" class="close" 
+		               data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		            </button>
+		            <h4 class="modal-title" id="myModalLabel">
+		               亲，您的积分不够！看看下面的介绍，快去赚取积分吧！
+		            </h4>
+		         </div>
+		         <div class="modal-body">
+		            <strong><img src="__PUBLIC__/img/icon/warmnotice.gif"> <font size="3px">如何获取积分</font></strong><br>
+	              <ul class="list-unstyled">
+								  <li>1·注册即送30个积分</li>
+								  <li>2·每天首页签到随机送积分</li>
+								  <li>3·每天首页参与积分抽奖活动</li>
+								</ul>
+		         </div>
+		         <div class="modal-footer">
+		            <button type="button" class="btn btn-default" 
+		               data-dismiss="modal">确定
+		            </button>
+		         </div>
+		      </div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/manager.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/MSClass.js"></script>
+<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery.form.js"></script>
+<script>
+	$(document).ready(function(){
+	  $("#l2").addClass("active");
+	  $(".showhide").addClass("alert alert-warning");
+	  $("#reducscore").hide();
+	  var u_uid = "{$_SESSION['u_UID']}";
+	  var u_score = "{$_SESSION['u_score']}";
+	  var l_score = "{$list['SCORE']}";
+	  var aldown = "{$aldown}";
+	  if(u_uid == "" || u_uid == undefined || u_uid == null)
+	  {
+	  	$(".showhide").html("亲,下载链接已经被隐藏，登录以后才能看到！快登录吧！");
+	  }else
+	  {
+	  	//alert(u_uid);
+	  	if(aldown == 1)//已经下载过了
+	  	{
+		  	$(".showhide").show();
+	  	}else
+	  	{
+	  		if((u_score-l_score)>=0)//分数够了
+			  {
+			  	$(".showhide").show();		  	
+			  }else
+			  {
+			  	$(".showhide").html("亲，积分不够呀，下载链接已经隐藏, 快去首页获取积分吧，很容易呦！");
+			  }
+	  	}
+	  	
+	  }
+	  /**
+	  **单击链扣除积分
+	  **/
+	  var fid = "{$list['FID']}";
+	  var datasend = {
+          aldown: aldown,
+          fid: fid,
+          score:l_score,
+          table: 4
+      };
+	  $(".showhide").click(function() 
+				  {
+					if(aldown != 1){
+						if(confirm('确定要扣除'+l_score+'个积分吗?'))
+						{
+						var url = '__URL__/showNScore/';  
+						$.ajax({  
+							type: "post",  
+							url: url,  
+							dataType: "json",  
+							data: datasend,
+							timeout: 1000,//超时时间 
+							success: function(msg)
+							{  
+								window.location.reload();
+							//	alert(fid);
+								if(msg == 0)
+								{
+									
+								}else if(msg == 1)
+								{
+								}else if(msg == 2)
+								{
+									alert("亲，还木登录，快去登录吧！");
+								}
+							}  
+						});
+						}
+					}  
+					});
+	}); 	
+</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","qzone","tsina","renren","tieba","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina","renren","tieba","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+   
+  </body>
+	
+</html> 

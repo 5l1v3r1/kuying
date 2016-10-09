@@ -1,0 +1,389 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class LoginController extends Controller {
+    /*
+    *生成验证码
+    *
+    */
+    public function verify(){
+        $Verify = new \Think\Verify();  
+		    $Verify->fontSize = 25;  
+		    $Verify->length   = 4;  
+		    $Verify->useNoise = true;  
+		    $Verify->useZh = true;  
+		    $Verify->imageW = 0;  
+		    $Verify->imageH = 0;  
+		    //$Verify->expire = 600;  
+		    $Verify->entry();  
+    }
+    /**
+    *   登录
+    **/
+    public function index()
+    {
+    	//echo "hahah ";
+    	$this->display(T('index/index'));
+    }
+    /**
+    **进入注册页面
+    **/
+    public function register()
+    {
+    	session('u_UID',null);  //清空session
+    	session('u_score',null);
+    	session('u_username',null);
+    	cookie('u_UID',null); 
+    	cookie('u_username',null);
+    	$this->display(T('reg_log/reg'));
+    }
+    /**
+    *  提交注册内容并进行邮件发送等
+    **/
+    public function post_reginfo()
+    {
+    		$verify = new \Think\Verify();//验证码对象
+    		//I('post.verify','','htmlspecialchars');//get yzm    
+    		if($verify->check(I('post.verify','','htmlspecialchars'), ''))
+    		{
+    			$data['EMAIL'] = I('post.email','','htmlspecialchars');//get email
+    			$Model = M('userinfo');
+    			$content = $Model->field('EMAIL,REGTIME,REG_FLAG')->where($data)->find();
+    			if($content != null || !empty($content))//存在这个email
+    			{
+    					if($content['REG_FLAG'] == 0 )//没有邮箱验证通过的用户
+    					{
+    						$nowtime = time();
+    						if(($nowtime-$content['REGTIME'])>=86400)//已过验证时间 可以删除当前用户数据
+    						{
+    							$del_num = $Model->where($data)->delete(); // 删除状态为0的用户数据
+	    						if($del_num = 0)//删除失败
+	    						{
+	    							//echo "del = 0";
+	    							$this->error('网络或者服务器错误，请重新注册试试！', U('Login/register'),3);
+	    						}else //删除成功，重新写入
+	    						{
+	    							goto flag;
+	    						}
+    						}else //处于验证时间期间
+    						{
+    							$this->error('请不要重复注册,请前往邮箱进行注册验证！', U('Index/showindex'),3);
+    						}
+    						
+    					}else//邮箱验证已通过的用户
+    					{
+    						//echo "exsit!";
+    						$this->error('该邮箱已经注册，请登录或者找回密码！', U('Login/loginpage'),3);
+    					}
+    			}else //不存在这个email
+    			{
+	    			flag:
+	    				$data['USERNAME'] = I('post.name','','htmlspecialchars');//get name
+			    		//$data['EMAIL'] = I('post.email','','htmlspecialchars');//get email
+			    		$data['PASSWORD'] = I('post.password','','htmlspecialchars');//get pwd
+			    		$data['SIGN_TIME'] = 0;
+			    		$data['GETS_TIME'] = 0;
+			    		$data['GETS_COUNT'] = 0;
+			    		$data['REGTIME'] = time();
+			    		$data['REG_FLAG'] = 0;
+			    		$data['USER_GROUP'] = 0;//普通用户组
+			    		$data['USER_SCORE'] = 30;//注册送30 分
+			    		$flag = false;
+			    		$flag = $Model->field('USERNAME,EMAIL,PASSWORD,SIGN_TIME,GETS_TIME,GETS_COUNT,REGTIME,REG_FLAG,USER_GROUP,USER_SCORE')->data($data)->add();
+			    		if($flag != false)
+			    		{
+			    			$token1 = authcode($data['REGTIME'],'ENCODE', 'nimomu@@ii',86400);
+			    			$token2 = authcode($data['EMAIL'],'ENCODE', 'buaa@@ii',86400);
+			    			$token1 = str_replace("+","%2B",$token1);
+			    			$token2 = str_replace("+","%2B",$token2);//防止+被get方法替换为空
+			    			$emailbody="亲爱的".$data['USERNAME']."：<br/>感谢您在我站注册了新帐号。<br/>请点击链接激活您的帐号。<br/> 
+									    <a href='http://127.0.0.1/kuying/index.php/Home/Login/emailcheck.html?to=".$token1."&too=".$token2."' target= 
+									'_blank'>http://127.0.0.1/kuying/index.php/Home/Login/emailcheck.html?to=".$token1."&too=".$token2."</a><br/> 
+									    如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。"; 
+								if(sendMail($data['EMAIL'],"酷影HD会员注册验证",$emailbody) == 1)
+								{
+									$this->success('注册成功，验证邮件已经发送到您的注册邮箱中，请24小时内进行邮箱验证',U('Index/showindex'));
+								}else
+								{
+									$this->error('验证邮件发送失败，可能是网络或者网站服务器问题！重新注册试试', U('Login/register'),3);
+								}
+			    			
+			    		}else
+			    		{
+			    			$this->error('注册失败，可能是网络或者网站服务器问题！重新注册试试', U('Login/register'),3);
+			    		}
+		    			//echo $data['name'] ;
+    			} 
+    			
+    		}else
+    		{
+    			$this->error('验证码错误，请重新注册！', U('Login/register'),3);
+    		}	
+        
+    }
+    /**
+    **注册邮箱信息接收验证提交
+    **/
+    public function emailcheck()
+    {
+    	$data['REGTIME'] = authcode(I('get.to','','htmlspecialchars'),'DECODE', 'nimomu@@ii'); //get name
+    	$data['EMAIL'] = authcode(I('get.too','','htmlspecialchars'),'DECODE', 'buaa@@ii'); //get name
+    	if(empty($data['REGTIME'])||empty($data['EMAIL']))
+    	{
+    		$this->error('验证链接已经过期，请重新注册！', U('Login/register'),3);
+    	}else
+    	{
+    		$Model = M('userinfo');
+    		$content = $Model->field('id,USERNAME,REG_FLAG,USER_SCORE')->where($data)->find();
+    		if($content != null || !empty($content))//存在这个email
+    		{
+    			if($content['REG_FLAG'] == 0)
+    			{
+    				$update = $Model-> where($data)->setField('REG_FLAG',1);
+    				if($update != false)
+    				{
+    					$this->success('注册成功，欢迎您成为酷影HD的会员！请登录',U('Login/loginpage'),2);
+    				}else
+    				{
+    					$this->error('网络有问题或者链接出现问题，请重新点击验证链接试试', U('Index/showindex'),3);
+    				}
+    				
+	    		}else
+	    		{
+	    			$this->error('邮箱已经使用，请勿重复注册，请登录或找回密码！', U('Login/loginpage'),3);
+	    		}
+    		}else
+    		{
+    			$this->error('验证链接已经过期！请重新注册', U('Login/register'),3);
+    		}
+    	}
+    	
+    	//$this->display(T('reg_log/reg'));
+    }
+    /**
+    **进入登录页面
+    **/
+    public function loginpage()
+    {
+    	session('u_UID',null);  //清空session
+			session('u_username',null);
+    	session('u_score',null);
+    	cookie('u_UID',null); 
+    	cookie('u_username',null); 
+    	//echo "reg suc";
+    	$this->display(T('reg_log/login'));
+    }
+    /**
+    **提交处理登录信息
+    **/
+    public function post_loginfo()
+    {
+    	$verify = new \Think\Verify();//验证码对象
+    		//I('post.verify','','htmlspecialchars');//get yzm    
+    		if($verify->check(I('post.verify','','htmlspecialchars'), ''))
+    		{
+    			$flag = 0;
+		    	$data_temp = I('post.uid','','htmlspecialchars');//get name
+		    	$data['PASSWORD'] = I('post.password','','htmlspecialchars');//get name
+		    	$Model = M('userinfo');
+		    	$data0['EMAIL'] = $data_temp;
+		    	$data0['REG_FLAG'] = 1;
+		    	$data0['PASSWORD'] = $data['PASSWORD'];
+		    	$content = $Model->field('id,USERNAME,USER_SCORE')->where($data0)->find();
+		    	if($content != null || !empty($content))//存在这个email
+		    	{
+		    		$flag = 1;
+		    	}else
+		    	{
+		    		$data1['USERNAME'] = $data_temp;
+		    		$data1['REG_FLAG'] = 1;
+		    		$data1['PASSWORD'] = $data['PASSWORD'];
+		    		$content = $Model->field('id,USERNAME,USER_SCORE')->where($data1)->find();
+		    		if($content != null || !empty($content))//存在这个用户名
+			    	{
+			    		$flag = 1;
+			    	}else
+			    	{
+			    		$data2['id'] = $data_temp;
+			    		$data2['REG_FLAG'] = 1;
+			    		$data2['PASSWORD'] = $data['PASSWORD'];
+			    		$content = $Model->field('id,USERNAME,USER_SCORE')->where($data2)->find();
+			    		if($content != null || !empty($content))//存在这个email
+				    	{
+				    		$flag = 1;
+				    	}
+			    	}
+		    	}
+		    	if($flag == 1)
+		    	{
+		    		session('u_UID',$content['id']);
+		    		session('u_username',$content['USERNAME']);
+		    		session('u_score',$content['USER_SCORE']);
+		    		if(I('post.remember','','htmlspecialchars') == 1)
+		    		{
+		    			cookie('u_UID',$content['id'],2592000);
+		    			cookie('u_username',$content['USERNAME'],2592000);
+		    		}
+		    		$this->success('登录成功，welcome！',U('Index/showindex'),2);
+		    	}else
+		    	{
+		    		$this->error('登录信息错误，请重新登录', U('Login/loginpage'),3);
+		    	}
+    		}else
+    		{
+    			$this->error('验证码错误，请重新登录！', U('Login/loginpage'),3);
+    		}	
+    	
+    	
+    	//session('u_UID',null);  //清空session
+    	//session('u_score',null);
+    	//cookie('u_UID',null); 
+    	//echo "reg suc";
+    	
+    }
+    /**
+    **退出登录
+    **/
+    public function outlogin()
+    {
+    	session('u_UID',null);  //清空session
+    	session('u_username',null);
+		  session('u_score',null);
+    	cookie('u_UID',null); 
+    	cookie('u_username',null);
+    	//echo "reg suc";
+    	$this->success('退出登录，欢迎下次登录噢');
+    }
+    /**
+    **忘记密码输入密码页面展示
+    **/
+    public function sendPwdShow()
+    {
+    	$this->display(T('reg_log/getpwd'));
+    }
+    /**
+    **忘记密码 发送丢失密码邮箱验证
+    **/
+    public function sendPwdInfo()
+    {
+    	$verify = new \Think\Verify();//验证码对象
+    		//I('post.verify','','htmlspecialchars');//get yzm    
+  		if($verify->check(I('post.verify','','htmlspecialchars'), ''))
+  		{
+  			$data['EMAIL'] = I('post.email','','htmlspecialchars');//get email
+  			$Model = M('userinfo');
+  			$content = $Model->field('EMAIL,USERNAME,REGTIME,REG_FLAG')->where($data)->find();
+  			if($content != null || !empty($content))//存在这个email
+  			{
+  					if($content['REG_FLAG'] == 0 )//没有邮箱验证通过的用户
+  					{
+  						$nowtime = time();
+    					if(($nowtime-$content['REGTIME'])>=86400)//已过验证时间 无法找回当前密码
+    					{
+    						$this->error('已超过注册链接验证时间,请重新注册', U('Login/register'),3);
+    					}else
+    					{
+    						$this->error('已注册,请尽快前往邮箱进行注册验证!', U('Index/showindex'),3);
+    					}
+  						
+  					}else //已经邮箱验证通过的用户
+  					{
+		    			$token1 = authcode($data['EMAIL'],'ENCODE', 'nimomu@@ii',86400);
+		    			$token2 = authcode(I('post.password','','htmlspecialchars'),'ENCODE', 'buaa@@ii',86400);
+		    			$token1 = str_replace("+","%2B",$token1);
+		    			$token2 = str_replace("+","%2B",$token2);//防止+被get方法替换为空
+		    			$emailbody="亲爱的".$content['USERNAME']."：<br/>酷影hd更改密码链接验证邮件。<br/>请点击链接更改您的密码。<br/> 
+								    <a href='http://127.0.0.1/kuying/index.php/Home/Login/pwdcheck.html?to=".$token1."&too=".$token2."' target= 
+								'_blank'>http://127.0.0.1/kuying/index.php/Home/Login/pwdcheck.html?to=".$token1."&too=".$token2."</a><br/> 
+								    如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。"; 
+							if(sendMail($data['EMAIL'],"酷影HD会员找回密码验证",$emailbody) == 1)
+							{
+								$this->success('密码修改申请链接已发送，请24小时内进行邮箱验证',U('Index/showindex'));
+							}else
+							{
+								$this->error('验证邮件发送失败，可能是网络或者网站服务器问题！重新试试', U('Login/loginpage'),3);
+							}
+  					}
+  			}else
+  			{
+  				$this->error('不存在这个邮箱，请登录注册页面注册', U('Index/showindex'),3);
+  			}
+    	
+    	}else
+    	{
+    		$this->error('验证码错误，请重新发送修改密码请求！', U('Login/sendPwdShow'),3);
+    	}
+    	//$this->display(T('reg_log/getpwd'));
+    }
+    /**
+    **找回密码邮箱信息接收验证提交
+    **/
+    public function pwdcheck()
+    {
+    	$data['EMAIL'] = authcode(I('get.to','','htmlspecialchars'),'DECODE', 'nimomu@@ii'); //get email
+    	$pwd = authcode(I('get.too','','htmlspecialchars'),'DECODE', 'buaa@@ii'); //get pwd
+    	if(empty($data['EMAIL'])||empty($pwd))
+    	{
+    		$this->error('验证链接已经过期，请重新找回密码！', U('Login/loginpage'),3);
+    	}else
+    	{
+    		$Model = M('userinfo');
+    		$content = $Model->field('PASSWORD')->where($data)->find();
+    		if($content != null || !empty($content))//存在这个email
+    		{
+  				$update = $Model-> where($data)->setField('PASSWORD',$pwd);
+  				if($update != false)
+  				{
+  					$this->success('密码修改成功，请登录',U('Login/loginpage'),2);
+  				}else
+  				{
+  					$this->error('网络有问题或者链接出现问题，请重新点击验证链接试试', U('Index/showindex'),3);
+  				}
+    		}else
+    		{
+    			$this->error('不存在这个邮箱！请重新注册', U('Login/register'),3);
+    		}
+    	}
+    	
+    	//$this->display(T('reg_log/reg'));
+    }
+    /**
+    **个人空间
+    **/
+    public function showPerson()
+    {
+    	$uu_uid = session('u_UID');
+    	if((session('u_UID') != null||!empty($uu_uid))&& (session('u_username') != null||!empty(session('u_username'))))//判断是否已经登录
+    	{
+    		$data['id'] = session('u_UID') ;
+    		$data['USERNAME'] = session('u_username');
+    		$Model = M('userinfo');
+  			$content = $Model->field('id,EMAIL,USERNAME,SIGN_TIME,GETS_TIME,GETS_COUNT,REGTIME,USER_GROUP,USER_SCORE')->where($data)->find();
+  			if($content != null || !empty($content))//存在这个email
+    		{
+    			$this->assign('per',$content);
+    			$this->display(T('reg_log/person'));
+    		}else
+    		{
+    			$this->error('不存在这个用户！');
+    		}
+    	}
+    	
+    	//$this->display(T('reg_log/reg'));
+    }
+    /**
+    ** 会员福利
+    **/
+    public function showMembertips()
+    {
+    	$this->display(T('reg_log/membertips'));
+    }
+    /**
+    ** 新手必读
+    **/
+    public function showNewsread()
+    {
+    	$this->display(T('reg_log/newsread'));
+    }
+      
+}

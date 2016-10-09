@@ -1,0 +1,121 @@
+function randomnum(smin, smax) {// 获取2个值之间的随机数
+	var Range = smax - smin;
+	var Rand = Math.random();
+	return (smin + Math.round(Rand * Range));
+}
+
+function runzp() {
+		var data = '[{"id":1,"prize":"590大洋","v":1.0},{"id":2,"prize":"100RMB","v":2.0},{"id":3,"prize":"安慰奖","v":48.0}]';// 奖项json
+		var obj = eval('(' + data + ')');
+		var result = randomnum(1, 100);
+		var line = 0;
+		var temp = 0;
+		var returnobj = "0";
+		var index = 0;
+	
+		//alert("随机数"+result);
+		for ( var i = 0; i < obj.length; i++) {
+			var obj2 = obj[i];
+			var c = parseFloat(obj2.v);
+			temp = temp + c;
+			line = 100 - temp;
+			if (c != 0) {
+				if (result > line && result <= (line + c)) {
+					index = i;
+					// alert(i+"中奖"+line+"<result"+"<="+(line + c));
+					returnobj = obj2;
+					break;
+				}
+			}
+		}
+		var angle = 320;
+		var message = "";
+		var myreturn = new Object;
+
+		//message = "再接再厉";
+		var angle0 = [ 344, 373 ];
+		var angle1 = [ 226, 254 ];
+		var angle2 = [ 109, 133 ];
+		//var angle3 = [ 17, 103 ];
+		var angle3 = [ 17, 43 ];// 中奖 4类
+		var angle6 = [ 46, 70 ];//未中奖 0类
+		var angle7 = [ 76, 103 ];// 中奖 4类
+		//var angle4 = [ 139, 220 ];
+		var angle4 = [ 139, 165 ];//中奖5类 
+		var angle8 = [ 166, 195 ];//未中奖 0类
+		var angle9 = [ 195, 220 ];//中奖5类 
+		//var angle5 = [ 259, 340 ];
+		var angle5 = [ 255, 278 ];// 中奖 6类
+		var angle10 = [ 280, 309 ];//未中奖 0类
+		var angle11 = [ 314, 340 ];// 中奖 6类
+		var r = randomnum(0, 11);
+		var angle;
+		switch (r) {
+		case 0:
+			var r0 = (angle0[0] + angle0[1])/2;
+			angle = r0;
+			myreturn.prize =1;
+			break;
+		case 1:
+			var r1 = (angle1[0] + angle1[1])/2;
+			angle = r1;
+			myreturn.prize =2;
+			break;
+		case 2:
+			var r2 = (angle2[0] + angle2[1])/2;
+			angle = r2;
+			myreturn.prize =3;
+			break;
+		case 3:
+			var r3 = (angle3[0] + angle3[1])/2;
+			angle = r3;
+			myreturn.prize =4;
+			break;
+		case 4:
+			var r4 = (angle4[0] + angle4[1])/2;
+			angle = r4;
+			myreturn.prize =5;
+			break;
+		case 5:
+			var r5 = (angle5[0] + angle5[1])/2;
+			angle = r5;
+			myreturn.prize =6;
+			break;
+		case 6:
+			var r6 = (angle6[0] + angle6[1])/2;
+			angle = r6;
+			myreturn.prize =0;
+			break;
+		case 7:
+			var r7 = (angle7[0] + angle7[1])/2;
+			angle = r7;
+			myreturn.prize =4;
+			break;
+		case 8:
+			var r8 = (angle8[0] + angle8[1])/2;
+			myreturn.prize = 0;
+			angle = r8;
+			break;
+		case 9:
+			var r9 = (angle9[0] + angle9[1])/2;
+			angle = r9;
+			myreturn.prize = 5;
+			break;
+		case 10:
+			var r10 = (angle10[0] + angle10[1])/2;
+			angle = r10;
+			myreturn.prize = 0;
+			break;
+		case 11:
+			var r11 = (angle11[0] + angle11[1])/2;
+			angle = r11;
+			myreturn.prize = 6;
+			break;
+		}
+		//
+
+
+	myreturn.angle = angle;
+	//myreturn.message = message;
+	return myreturn;
+}// JavaScript Document

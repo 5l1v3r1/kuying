@@ -1,0 +1,63 @@
+<script type="text/javascript">
+$(function(){
+	$(".changeDefault").live("click",function()
+	{
+		var id = $(this).parent().parent().attr("rel");
+		
+		$.post('__CONTROLLER__/changeDefault',{'id':id},function(data)
+		{
+			if(data.result == 1)
+			{
+				//$(".status").html("--"); //此方法多处理一条设置
+				$("tr[rel!='"+id+"']").children(".status").html("--");
+				$("tr[rel='"+id+"']").children(".status").html("是");
+			}
+		});
+	});
+});
+</script>
+
+<div class="pageContent">
+    <!--操作按钮-->
+    <div class="panelBar">
+    	<ul class="toolBar">
+        	<li><a class="add" href="__MODULE__/platform/add/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" mask="true" maxable="false" width="450"><span>新增</span></a></li>
+            <li><a class="delete" href="__MODULE__/platform/foreverdelete/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" posttype="string" rel="id" target="selectedTodo" title="确定要删除选中的记录吗？" warn="请至少选择一条记录"><span>删除</span></a></li>
+            <li><a class="edit" href="__MODULE__/platform/edit/id/{sid_authrule}/navTabId/{$Think.CONTROLLER_NAME|strtolower}_{$Think.ACTION_NAME|strtolower}" target="dialog" mask="true" warn="请选择一条记录" width="450"><span>编辑</span></a></li>
+        </ul>
+    </div>
+    <!--操作按钮结束-->
+
+    <!--数据显示-->
+    <table class="list" width="100%" layoutH="115">
+    	<thead>
+        	<tr>
+            	<th width="7%"><input type="checkbox" group="id" class="checkboxCtrl" /></th>
+                <th width="8%">编号</th>
+                <th width="10%">支付平台</th>
+                <th width="10%">支付平台(英)</th>
+                <th width="15%">支付账户</th>
+                <th width="15%">合作者身份</th>
+                <th width="15%">安全检验码</th>
+                <th width="10%">默认</th>
+                <th width="10%">设置</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<volist id="vo" name="list">
+                <tr target="sid_authrule" rel="{$vo['id']}">
+                    <td><input type="checkbox" name="id" value="{$vo['id']}" /></td>
+                    <td>{$vo['id']}</td>
+                    <td >{$vo['platform']}</td>
+                    <td >{$vo['platform_en']}</td>
+                    <td>{$vo['seller']}</td>
+                    <td>{$vo['partner']}</td>
+                    <td>{$vo['key']|getKey}</td>
+                    <td class="status"><if condition="$vo['status'] eq 1">是<else/>--</if></td>
+                    <td><a class="changeDefault" href="javascript:void(0);"><img src="__PUBLIC__/themes/default/images/default.png" /></a></td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <!--数据显示结束-->
+</div>
